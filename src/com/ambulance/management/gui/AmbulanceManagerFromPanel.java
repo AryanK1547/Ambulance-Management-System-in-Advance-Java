@@ -56,14 +56,6 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
         btnShowUpdateAmbulancePanel = new javax.swing.JButton();
         btnShowRemoveAmbulancePanel = new javax.swing.JButton();
         mainPanel = new javax.swing.JPanel();
-        removeAmbulancePanel = new javax.swing.JPanel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        btnRemoveAmbulance = new javax.swing.JButton();
-        txtRemoveAmbulanceID = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jLabel43 = new javax.swing.JLabel();
         addAmbulancePanel = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
@@ -79,8 +71,20 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
         btnClearAddAmbulance = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         cbAddLocation = new javax.swing.JComboBox<>();
+        removeAmbulancePanel = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        btnRemoveAmbulance = new javax.swing.JButton();
+        txtRemoveAmbulanceID = new javax.swing.JTextField();
+        jTextField14 = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tableRemoveAmbulance = new javax.swing.JTable();
+        cbRemoveType = new javax.swing.JComboBox<>();
+        cbRemoveStatus = new javax.swing.JComboBox<>();
+        cbRemoveLocation = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
         updateAmbulancePanel = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
@@ -99,6 +103,13 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
         ShowAmbulancePanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableAllAmbulance = new javax.swing.JTable();
+        cbShowSelectedType = new javax.swing.JComboBox<>();
+        cbShowSelectedStatus = new javax.swing.JComboBox<>();
+        cbShowSelectedLocation = new javax.swing.JComboBox<>();
+        btnFilterShowAllAmb = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         btnShowAllAmbulance = new javax.swing.JButton();
 
         jCheckBox1.setText("jCheckBox1");
@@ -132,41 +143,6 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
         });
 
         mainPanel.setLayout(new java.awt.CardLayout());
-
-        jLabel39.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        jLabel39.setText("Ambulance ID");
-
-        jLabel40.setFont(new java.awt.Font("Tw Cen MT", 3, 14)); // NOI18N
-        jLabel40.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel40.setText("Remove Ambulance");
-
-        jLabel41.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        jLabel41.setText("Registration Number");
-
-        btnRemoveAmbulance.setBackground(new java.awt.Color(255, 0, 51));
-        btnRemoveAmbulance.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        btnRemoveAmbulance.setText(" Remove Ambulance");
-        btnRemoveAmbulance.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRemoveAmbulancejButton9ActionPerformed(evt);
-            }
-        });
-
-        txtRemoveAmbulanceID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtRemoveAmbulanceIDjTextField5ActionPerformed(evt);
-            }
-        });
-
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
-            }
-        });
-
-        jLabel43.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jLabel43.setText("Ambulance Manager - ");
 
         jLabel27.setText("Ambulance ID");
 
@@ -246,7 +222,7 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
                                     .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(cbAddLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 153, Short.MAX_VALUE)))))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(42, 42, 42))
             .addGroup(addAmbulancePanelLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
@@ -289,6 +265,43 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
                 .addGap(30, 30, 30))
         );
 
+        mainPanel.add(addAmbulancePanel, "card5");
+
+        jLabel39.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jLabel39.setText(">Ambulance ID");
+
+        jLabel40.setFont(new java.awt.Font("Tw Cen MT", 3, 14)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel40.setText("Remove Ambulance");
+
+        jLabel41.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jLabel41.setText(">Registration Number");
+
+        btnRemoveAmbulance.setBackground(new java.awt.Color(255, 0, 51));
+        btnRemoveAmbulance.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        btnRemoveAmbulance.setText(" Remove Ambulance");
+        btnRemoveAmbulance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveAmbulancejButton9ActionPerformed(evt);
+            }
+        });
+
+        txtRemoveAmbulanceID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRemoveAmbulanceIDjTextField5ActionPerformed(evt);
+            }
+        });
+
+        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField14ActionPerformed(evt);
+            }
+        });
+
+        jLabel43.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        jLabel43.setText("Ambulance Manager - ");
+
         tableRemoveAmbulance.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -302,66 +315,99 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tableRemoveAmbulance);
 
+        cbRemoveType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbRemoveType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbRemoveTypeActionPerformed(evt);
+            }
+        });
+
+        cbRemoveStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbRemoveStatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbRemoveStatusActionPerformed(evt);
+            }
+        });
+
+        cbRemoveLocation.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbRemoveLocation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbRemoveLocationActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("OR");
+
         javax.swing.GroupLayout removeAmbulancePanelLayout = new javax.swing.GroupLayout(removeAmbulancePanel);
         removeAmbulancePanel.setLayout(removeAmbulancePanelLayout);
         removeAmbulancePanelLayout.setHorizontalGroup(
             removeAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(removeAmbulancePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(addAmbulancePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(50, 50, 50)
+                .addComponent(jLabel43)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, removeAmbulancePanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(370, 370, 370))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, removeAmbulancePanelLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(cbRemoveType, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(89, 89, 89)
+                .addComponent(cbRemoveStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cbRemoveLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
+            .addGroup(removeAmbulancePanelLayout.createSequentialGroup()
                 .addGroup(removeAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(removeAmbulancePanelLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jScrollPane2))
+                        .addGap(317, 317, 317)
+                        .addComponent(btnRemoveAmbulance))
                     .addGroup(removeAmbulancePanelLayout.createSequentialGroup()
-                        .addGroup(removeAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(removeAmbulancePanelLayout.createSequentialGroup()
-                                .addGap(69, 69, 69)
-                                .addGroup(removeAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(removeAmbulancePanelLayout.createSequentialGroup()
-                                        .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtRemoveAmbulanceID, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(removeAmbulancePanelLayout.createSequentialGroup()
-                                        .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(removeAmbulancePanelLayout.createSequentialGroup()
-                                .addComponent(jLabel43)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(removeAmbulancePanelLayout.createSequentialGroup()
-                                .addGap(331, 331, 331)
-                                .addComponent(btnRemoveAmbulance)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtRemoveAmbulanceID, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(48, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, removeAmbulancePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
                 .addContainerGap())
         );
         removeAmbulancePanelLayout.setVerticalGroup(
             removeAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(removeAmbulancePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(removeAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(addAmbulancePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(19, 19, 19)
+                .addGroup(removeAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel43)
                     .addGroup(removeAmbulancePanelLayout.createSequentialGroup()
-                        .addGroup(removeAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel43)
-                            .addGroup(removeAmbulancePanelLayout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(removeAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(removeAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtRemoveAmbulanceID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addComponent(btnRemoveAmbulance)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(4, 4, 4)
+                        .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGroup(removeAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbRemoveType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbRemoveStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbRemoveLocation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(removeAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtRemoveAmbulanceID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnRemoveAmbulance)
+                .addContainerGap())
         );
 
         mainPanel.add(removeAmbulancePanel, "card3");
@@ -429,7 +475,7 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, updateAmbulancePanelLayout.createSequentialGroup()
                                 .addComponent(cbUpdateAmbulanceType, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(24, 24, 24)
-                                .addComponent(cbUpdateAmbulanceStatus, 0, 431, Short.MAX_VALUE))
+                                .addComponent(cbUpdateAmbulanceStatus, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(txtUpdateAmbulanceID, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, updateAmbulancePanelLayout.createSequentialGroup()
                                 .addGroup(updateAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -441,12 +487,12 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
                         .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(144, 144, 144)
                         .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(375, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(updateAmbulancePanelLayout.createSequentialGroup()
                         .addGroup(updateAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cbUpdateLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(0, 539, Short.MAX_VALUE))))
         );
         updateAmbulancePanelLayout.setVerticalGroup(
             updateAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -497,21 +543,67 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tableAllAmbulance);
 
+        cbShowSelectedType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbShowSelectedType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbShowSelectedTypeActionPerformed(evt);
+            }
+        });
+
+        cbShowSelectedStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        cbShowSelectedLocation.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        btnFilterShowAllAmb.setText("Filter");
+        btnFilterShowAllAmb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFilterShowAllAmbActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Type");
+
+        jLabel5.setText(" Status");
+
+        jLabel6.setText("Location");
+
         javax.swing.GroupLayout ShowAmbulancePanelLayout = new javax.swing.GroupLayout(ShowAmbulancePanel);
         ShowAmbulancePanel.setLayout(ShowAmbulancePanelLayout);
         ShowAmbulancePanelLayout.setHorizontalGroup(
             ShowAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ShowAmbulancePanelLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(cbShowSelectedType, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(cbShowSelectedStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cbShowSelectedLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(btnFilterShowAllAmb)
+                .addContainerGap())
+            .addComponent(jScrollPane1)
         );
         ShowAmbulancePanelLayout.setVerticalGroup(
             ShowAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ShowAmbulancePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addGroup(ShowAmbulancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbShowSelectedType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbShowSelectedStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbShowSelectedLocation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFilterShowAllAmb)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         mainPanel.add(ShowAmbulancePanel, "card5");
@@ -527,32 +619,34 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(247, 247, 247))
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnShowAddAmbulancePanel)
-                .addGap(18, 18, 18)
-                .addComponent(btnShowUpdateAmbulancePanel)
-                .addGap(18, 18, 18)
-                .addComponent(btnShowRemoveAmbulancePanel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnShowAllAmbulance)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnShowAddAmbulancePanel)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnShowUpdateAmbulancePanel)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnShowRemoveAmbulancePanel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnShowAllAmbulance))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(270, 270, 270)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(54, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 789, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51))
+                .addGap(0, 6, Short.MAX_VALUE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(btnShowAddAmbulancePanel)
@@ -578,110 +672,13 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
 
     private void btnShowUpdateAmbulancePanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowUpdateAmbulancePanelActionPerformed
         // TODO add your handling code here:
+        initializeComboBoxValues();
         mainPanel.removeAll();
         showAvailableAmbulances();
         mainPanel.add(updateAmbulancePanel);
         mainPanel.repaint();
         mainPanel.revalidate();
     }//GEN-LAST:event_btnShowUpdateAmbulancePanelActionPerformed
-
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-// TODO add your handling code here:
-String ambulanceId = txtAddAmbulanceID.getText().trim();
-String driverName = txtAddDriverName.getText().trim();
-String type = cbAddAmbulanceType.getSelectedItem() != null ? cbAddAmbulanceType.getSelectedItem().toString() : "";
-String status = cbAddAmbulanceStatus.getSelectedItem() != null ? cbAddAmbulanceStatus.getSelectedItem().toString() : "";
-String location = cbAddLocation.getSelectedItem() != null ? cbAddLocation.getSelectedItem().toString() : "";
-
-// Validate each field before proceeding
-if (ambulanceId.isEmpty()) {
-    JOptionPane.showMessageDialog(this, "Ambulance ID is required.");
-    txtAddAmbulanceID.requestFocus();
-    return;
-}
-
-if (driverName.isEmpty()) {
-    JOptionPane.showMessageDialog(this, "Driver name is required.");
-    txtAddDriverName.requestFocus();
-    return;
-}
-
-if (type.isEmpty()) {
-    JOptionPane.showMessageDialog(this, "Ambulance type is required.");
-    cbAddAmbulanceType.requestFocus();
-    return;
-}
-
-if (status.isEmpty()) {
-    JOptionPane.showMessageDialog(this, "Ambulance status is required.");
-    cbAddAmbulanceStatus.requestFocus();
-    return;
-}
-
-if (location.isEmpty()) {
-    JOptionPane.showMessageDialog(this, "Ambulance location is required.");
-    cbAddLocation.requestFocus();
-    return;
-}
-
-// Database connection parameters
-String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
-String username = "root";
-String password = "mysql";
-
-// SQL insert statement
-String insertSQL = "INSERT INTO Ambulance (ambulance_id, driver_name, type, status, location) VALUES (?, ?, ?, ?, ?)";
-
-// Initialize connection and prepared statement
-Connection conn = null;
-PreparedStatement pstmt = null;
-
-try {
-    // Establishing the database connection
-    conn = DriverManager.getConnection(url, username, password);
-    pstmt = conn.prepareStatement(insertSQL);
-
-    // Set parameters for the SQL query
-    pstmt.setString(1, ambulanceId);
-    pstmt.setString(2, driverName);
-    pstmt.setString(3, type);
-    pstmt.setString(4, status);
-    pstmt.setString(5, location);
-
-    // Execute the insert operation
-    int rowsAffected = pstmt.executeUpdate();
-
-    if (rowsAffected > 0) {
-        JOptionPane.showMessageDialog(this, "Ambulance added successfully!");
-        // Clear the form fields after insertion
-        txtAddAmbulanceID.setText("");
-        txtAddDriverName.setText("");
-        cbAddAmbulanceType.setSelectedIndex(0);
-        cbAddAmbulanceStatus.setSelectedIndex(0);
-        cbAddLocation.setSelectedIndex(0);
-    } else {
-        JOptionPane.showMessageDialog(this, "Failed to add ambulance.");
-    }
-
-} catch (SQLException ex) {
-    // Error handling for database connection or SQL issues
-    JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage());
-} finally {
-    // Ensure resources are closed after the operation
-    try {
-        if (pstmt != null) pstmt.close();
-        if (conn != null) conn.close();
-    } catch (SQLException ex) {
-        JOptionPane.showMessageDialog(this, "Error closing resources: " + ex.getMessage());
-    }
-}
-
-    }//GEN-LAST:event_jButton9ActionPerformed
 
     private void btnUpdateAmbulancejButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateAmbulancejButton9ActionPerformed
     // Retrieve user input
@@ -750,11 +747,15 @@ try {
     }//GEN-LAST:event_txtUpdateAmbulanceIDjTextField5ActionPerformed
 
     private void btnShowRemoveAmbulancePanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowRemoveAmbulancePanelActionPerformed
-      mainPanel.removeAll();
+      initializeRemoveFiterComboBoxes();
+      
+        mainPanel.removeAll();
     mainPanel.add(removeAmbulancePanel);
+   
 
     // Populate the table with data
-    populateAmbulanceTable(tableRemoveAmbulance); // Call method to populate the table
+    populateRemoveAllAmbulancesTable(tableRemoveAmbulance); // Call method to populate the table
+    
 
     // Refresh the panel view
     mainPanel.repaint();
@@ -797,8 +798,8 @@ try {
     }//GEN-LAST:event_btnRemoveAmbulancejButton9ActionPerformed
 
     private void btnShowAllAmbulanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowAllAmbulanceActionPerformed
-        // TODO add your handling code here:
- showAmbulancePanel();
+    initializeShowFiterComboBoxes();        // TODO add your handling code here:
+    showAmbulancePanel();
     mainPanel.removeAll();
         mainPanel.add(ShowAmbulancePanel);
          mainPanel.repaint();
@@ -807,8 +808,128 @@ try {
 
     private void cbAddAmbulanceStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAddAmbulanceStatusActionPerformed
         // TODO add your handling code here:
-
     }//GEN-LAST:event_cbAddAmbulanceStatusActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+        String ambulanceId = txtAddAmbulanceID.getText().trim();
+        String driverName = txtAddDriverName.getText().trim();
+        String type = cbAddAmbulanceType.getSelectedItem() != null ? cbAddAmbulanceType.getSelectedItem().toString() : "";
+        String status = cbAddAmbulanceStatus.getSelectedItem() != null ? cbAddAmbulanceStatus.getSelectedItem().toString() : "";
+        String location = cbAddLocation.getSelectedItem() != null ? cbAddLocation.getSelectedItem().toString() : "";
+
+        // Validate each field before proceeding
+        if (ambulanceId.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ambulance ID is required.");
+            txtAddAmbulanceID.requestFocus();
+            return;
+        }
+
+        if (driverName.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Driver name is required.");
+            txtAddDriverName.requestFocus();
+            return;
+        }
+
+        if (type.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ambulance type is required.");
+            cbAddAmbulanceType.requestFocus();
+            return;
+        }
+
+        if (status.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ambulance status is required.");
+            cbAddAmbulanceStatus.requestFocus();
+            return;
+        }
+
+        if (location.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ambulance location is required.");
+            cbAddLocation.requestFocus();
+            return;
+        }
+
+        // Database connection parameters
+        String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
+        String username = "root";
+        String password = "mysql";
+
+        // SQL insert statement
+        String insertSQL = "INSERT INTO Ambulance (ambulance_id, driver_name, type, status, location) VALUES (?, ?, ?, ?, ?)";
+
+        // Initialize connection and prepared statement
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        try {
+            // Establishing the database connection
+            conn = DriverManager.getConnection(url, username, password);
+            pstmt = conn.prepareStatement(insertSQL);
+
+            // Set parameters for the SQL query
+            pstmt.setString(1, ambulanceId);
+            pstmt.setString(2, driverName);
+            pstmt.setString(3, type);
+            pstmt.setString(4, status);
+            pstmt.setString(5, location);
+
+            // Execute the insert operation
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                JOptionPane.showMessageDialog(this, "Ambulance added successfully!");
+                // Clear the form fields after insertion
+                txtAddAmbulanceID.setText("");
+                txtAddDriverName.setText("");
+                cbAddAmbulanceType.setSelectedIndex(0);
+                cbAddAmbulanceStatus.setSelectedIndex(0);
+                cbAddLocation.setSelectedIndex(0);
+            } else {
+                JOptionPane.showMessageDialog(this, "Failed to add ambulance.");
+            }
+
+        } catch (SQLException ex) {
+            // Error handling for database connection or SQL issues
+            JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage());
+        } finally {
+            // Ensure resources are closed after the operation
+            try {
+                if (pstmt != null) pstmt.close();
+                if (conn != null) conn.close();
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(this, "Error closing resources: " + ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void cbShowSelectedTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbShowSelectedTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbShowSelectedTypeActionPerformed
+
+    private void btnFilterShowAllAmbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFilterShowAllAmbActionPerformed
+        // TODO add your handling code here:
+        populateShowAllAmbulancesTable(tableAllAmbulance);
+    }//GEN-LAST:event_btnFilterShowAllAmbActionPerformed
+
+    private void cbRemoveTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbRemoveTypeActionPerformed
+        populateRemoveAllAmbulancesTable(tableRemoveAmbulance);        // TODO add your handling code here:
+     
+    }//GEN-LAST:event_cbRemoveTypeActionPerformed
+
+    private void cbRemoveStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbRemoveStatusActionPerformed
+        // TODO add your handling code here:
+      populateRemoveAllAmbulancesTable(tableRemoveAmbulance);
+    }//GEN-LAST:event_cbRemoveStatusActionPerformed
+
+    private void cbRemoveLocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbRemoveLocationActionPerformed
+        // TODO add your handling code here:
+        populateRemoveAllAmbulancesTable(tableRemoveAmbulance);
+    }//GEN-LAST:event_cbRemoveLocationActionPerformed
 
     /**
      * @param args the command line arguments
@@ -853,6 +974,7 @@ try {
     private javax.swing.JButton btnAddAmbulance;
     private javax.swing.JButton btnClearAddAmbulance;
     private javax.swing.JButton btnClearUpdateAmbulance;
+    private javax.swing.JButton btnFilterShowAllAmb;
     private javax.swing.JButton btnRemoveAmbulance;
     private javax.swing.JButton btnShowAddAmbulancePanel;
     private javax.swing.JButton btnShowAllAmbulance;
@@ -862,6 +984,12 @@ try {
     private javax.swing.JComboBox<String> cbAddAmbulanceStatus;
     private javax.swing.JComboBox<String> cbAddAmbulanceType;
     private javax.swing.JComboBox<String> cbAddLocation;
+    private javax.swing.JComboBox<String> cbRemoveLocation;
+    private javax.swing.JComboBox<String> cbRemoveStatus;
+    private javax.swing.JComboBox<String> cbRemoveType;
+    private javax.swing.JComboBox<String> cbShowSelectedLocation;
+    private javax.swing.JComboBox<String> cbShowSelectedStatus;
+    private javax.swing.JComboBox<String> cbShowSelectedType;
     private javax.swing.JComboBox<String> cbUpdateAmbulanceStatus;
     private javax.swing.JComboBox<String> cbUpdateAmbulanceType;
     private javax.swing.JComboBox<String> cbUpdateLocation;
@@ -882,10 +1010,14 @@ try {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField14;
@@ -1106,42 +1238,111 @@ private void deleteAmbulance(String ambulanceId) {
   
         // Switch to the ShowAmbulancePanel
     
-        populateAmbulanceTable(tableAllAmbulance); // Call method to populate the table
+        populateShowAllAmbulancesTable(tableAllAmbulance); // Call method to populate the table
      
        
     }
 
 
     // Method to populate the JTable with existing data
-    private void populateAmbulanceTable(JTable tb) {
-        // Clear existing data from the table
-        DefaultTableModel model = (DefaultTableModel) tb.getModel();
-        model.setRowCount(0); // Remove all rows
+ private void populateShowAllAmbulancesTable(JTable tb) {
+    // Clear existing data from the table
+    DefaultTableModel model = (DefaultTableModel) tb.getModel();
+    model.setRowCount(0); // Remove all rows
+    
+    // Get selected values from Show All combo boxes
+    String selectedType = cbShowSelectedType.getSelectedItem().toString();
+    String selectedLocation = cbShowSelectedLocation.getSelectedItem().toString();
+    String selectedStatus = cbShowSelectedStatus.getSelectedItem().toString();
 
-        // SQL query to fetch all ambulances
-        String query = "SELECT ambulance_id,registration_number, driver_name, type, status, location FROM Ambulance";
+    // Start building the SQL query for Show All
+    StringBuilder query = new StringBuilder("SELECT ambulance_id, registration_number, driver_name, type, status, location FROM Ambulance WHERE 1=1");
+
+    // Add conditions based on combo box selections
+    if (!selectedType.equals("All")) {
+        query.append(" AND type = '").append(selectedType).append("'");
+    }
+    if (!selectedLocation.equals("All")) {
+        query.append(" AND location = '").append(selectedLocation).append("'");
+    }
+    if (!selectedStatus.equals("All")) {
+        query.append(" AND status = '").append(selectedStatus).append("'");
+    }
+
+    // Database connection details
+    String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
+    String username = "root";
+    String password = "mysql";
+
+    try (Connection conn = DriverManager.getConnection(url, username, password);
+         Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery(query.toString())) {
+
+        // Iterate through the result set and add rows to the table model
+        while (rs.next()) {
+            String ambulanceId = rs.getString("ambulance_id");
+            String registrationNo = rs.getString("registration_number");
+            String driverName = rs.getString("driver_name");
+            String type = rs.getString("type");
+            String status = rs.getString("status");
+            String location = rs.getString("location");
+            model.addRow(new Object[]{ambulanceId, registrationNo, driverName, type, status, location});
+        }
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, "Error fetching data: " + e.getMessage());
+    }
+}
+ private void removeSelectedAmbulance(JTable tb) {
+    // Get the selected row from the table
+    int selectedRow = tb.getSelectedRow();
+
+    // Check if a row is selected
+    if (selectedRow == -1) {
+        JOptionPane.showMessageDialog(null, "Please select an ambulance to remove.");
+        return;
+    }
+
+    // Get the ambulance ID from the selected row (assuming ambulance_id is the first column)
+    String ambulanceId = tb.getValueAt(selectedRow, 0).toString();
+
+    // Show confirmation dialog
+    int confirm = JOptionPane.showConfirmDialog(
+        null,
+        "Are you sure you want to remove ambulance ID: " + ambulanceId + "?",
+        "Confirm Removal",
+        JOptionPane.YES_NO_OPTION
+    );
+
+    if (confirm == JOptionPane.YES_OPTION) {
+        // Proceed with the removal from the database
+        String query = "DELETE FROM Ambulance WHERE ambulance_id = ?";
+        
+        // Database connection details
         String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
         String username = "root";
         String password = "mysql";
-
-        // Establish a connection and fetch data
+        
         try (Connection conn = DriverManager.getConnection(url, username, password);
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(query)) {
+             PreparedStatement stmt = conn.prepareStatement(query)) {
 
-            // Iterate through the result set and add rows to the table model
-            while (rs.next()) {
-                String ambulanceId = rs.getString("ambulance_id");
-                String registrationNo = rs.getString("registration_number");
-                String driverName = rs.getString("driver_name");
-                String type = rs.getString("type");
-                String status = rs.getString("status");
-                String location = rs.getString("location");
-                model.addRow(new Object[]{ambulanceId,registrationNo, driverName, type, status, location});
+            // Set the ambulance ID to be removed
+            stmt.setString(1, ambulanceId);
+            int rowsAffected = stmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                JOptionPane.showMessageDialog(null, "Ambulance removed successfully.");
+                // Refresh the table to reflect the changes
+                populateShowAllAmbulancesTable(tb); // Re-populate the table based on the current filter/sort
+            } else {
+                JOptionPane.showMessageDialog(null, "No ambulance found with the given ID.");
             }
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Error fetching data: " + e.getMessage());
-        }}
+            JOptionPane.showMessageDialog(null, "Error removing ambulance: " + e.getMessage());
+        }
+    }
+}
+
+
 
     private void showAmbulanceRemovePanel() {
          populateAmbulanceTable(tableRemoveAmbulance); // Call method to populate the table
@@ -1182,20 +1383,213 @@ private void populateComboBoxes() {
     cbAddAmbulanceStatus.removeAllItems();
     cbAddLocation.removeAllItems();
     // Populate "type" combo box
-    cbAddAmbulanceType.addItem("Basic");
-    cbAddAmbulanceType.addItem("Advanced");
-    cbAddAmbulanceType.addItem("ICU");
+    cbAddAmbulanceType.addItem("Basic Life Support (BLS)");
+    cbAddAmbulanceType.addItem("Advanced Life Support (ALS)");
+    cbAddAmbulanceType.addItem("Patient Transport Vehicle (PTV");
+    cbAddAmbulanceType.addItem("Neonatal Ambulance");
+    cbAddAmbulanceType.addItem("Air Ambulance");
+
+    
 
     // Populate "status" combo box
     cbAddAmbulanceStatus.addItem("Available");
+    cbAddAmbulanceStatus.addItem("Assigned");
     cbAddAmbulanceStatus.addItem("In Service");
-    cbAddAmbulanceStatus.addItem("Under Maintenance");
 
     // Populate "location" combo box
-    cbAddLocation.addItem("Location A");
-    cbAddLocation.addItem("Location B");
-    cbAddLocation.addItem("Location C");
+    cbAddLocation.addItem("Central Hospital");
+    cbAddLocation.addItem("North Wing Health Center");
+    cbAddLocation.addItem("East District Hospital");
+    cbAddLocation.addItem("West Side Clinic");
+    cbAddLocation.addItem("South Regional Hospital");
 }
+private void initializeComboBoxValues() {
+    // Method to populate ComboBox values
+
+    // Clear existing items to prevent duplicate entries
+    cbUpdateAmbulanceType.removeAllItems();
+    cbUpdateAmbulanceStatus.removeAllItems();
+    cbUpdateLocation.removeAllItems();
+    
+    // Populate Ambulance Type ComboBox
+    cbUpdateAmbulanceType.addItem("Basic Life Support (BLS)");
+    cbUpdateAmbulanceType.addItem("Advanced Life Support (ALS)");
+    cbUpdateAmbulanceType.addItem("Patient Transport Vehicle (PTV)");
+     cbUpdateAmbulanceType.addItem("Neonatal Ambulance");
+      cbUpdateAmbulanceType.addItem("Air Ambulance");
+
+    // Populate Status ComboBox
+    cbUpdateAmbulanceStatus.addItem("Available");
+    cbUpdateAmbulanceStatus.addItem("Assigned");
+    cbUpdateAmbulanceStatus.addItem("In Service");
+
+    // Populate Location ComboBox
+    cbUpdateLocation.addItem("Central Hospital");
+    cbUpdateLocation.addItem("North Wing Health Center");
+    cbUpdateLocation.addItem("East District Hospital");
+    cbUpdateLocation.addItem("West Side Clinic");
+    cbUpdateLocation.addItem("South Regional Hospital");
+}
+private void initializeShowFiterComboBoxes() {
+    cbShowSelectedType.removeAllItems();
+    cbShowSelectedStatus.removeAllItems();
+    cbShowSelectedLocation.removeAllItems();
+    // Add default "All" option
+    cbShowSelectedType.addItem("All");
+    cbShowSelectedStatus.addItem("All");
+    cbShowSelectedLocation.addItem("All");
+
+    // Populate "type" combo box with available ambulance types
+    cbShowSelectedType.addItem("Basic Life Support (BLS)");
+    cbShowSelectedType.addItem("Advanced Life Support (ALS)");
+    cbShowSelectedType.addItem("Patient Transport Vehicle (PTV)");
+    cbShowSelectedType.addItem("Neonatal Ambulance");
+    cbShowSelectedType.addItem("Air Ambulance");
+
+    // Populate "status" combo box with available statuses
+    cbShowSelectedStatus.addItem("Available");
+    cbShowSelectedStatus.addItem("Assigned");
+    cbShowSelectedStatus.addItem("In Service");
+
+    // Populate "location" combo box with available locations
+    cbShowSelectedLocation.addItem("Central Hospital");
+    cbShowSelectedLocation.addItem("North Wing Health Center");
+    cbShowSelectedLocation.addItem("East District Hospital");
+    cbShowSelectedLocation.addItem("West Side Clinic");
+    cbShowSelectedLocation.addItem("South Regional Hospital");
+}
+private void initializeRemoveFiterComboBoxes() {
+    cbRemoveType.removeAllItems();
+    cbRemoveStatus.removeAllItems();
+    cbRemoveLocation.removeAllItems();
+    // Add default "All" option
+    cbRemoveType.addItem("All");
+    cbRemoveStatus.addItem("All");
+    cbRemoveLocation.addItem("All");
+
+    // Populate "type" combo box with available ambulance types
+    cbRemoveType.addItem("Basic Life Support (BLS)");
+    cbRemoveType.addItem("Advanced Life Support (ALS)");
+    cbRemoveType.addItem("Patient Transport Vehicle (PTV)");
+    cbRemoveType.addItem("Neonatal Ambulance");
+    cbShowSelectedType.addItem("Air Ambulance");
+
+    // Populate "status" combo box with available statuses
+    cbRemoveStatus.addItem("Available");
+    cbRemoveStatus.addItem("Assigned");
+    cbRemoveStatus.addItem("In Service");
+
+    // Populate "location" combo box with available locations
+    cbRemoveLocation.addItem("Central Hospital");
+    cbRemoveLocation.addItem("North Wing Health Center");
+    cbRemoveLocation.addItem("East District Hospital");
+    cbRemoveLocation.addItem("West Side Clinic");
+    cbRemoveLocation.addItem("South Regional Hospital");
+}
+private void populateRemoveAllAmbulancesTable(JTable tb) {
+    // Clear existing data from the table
+    DefaultTableModel model = (DefaultTableModel) tb.getModel();
+    model.setRowCount(0); // Remove all rows
+
+    // Get selected values from combo boxes and handle null values
+    String selectedType = cbRemoveType.getSelectedItem() != null ? cbRemoveType.getSelectedItem().toString() : "All";
+    String selectedLocation = cbRemoveLocation.getSelectedItem() != null ? cbRemoveLocation.getSelectedItem().toString() : "All";
+    String selectedStatus = cbRemoveStatus.getSelectedItem() != null ? cbRemoveStatus.getSelectedItem().toString() : "All";
+
+    // Start building the SQL query for Show All
+    StringBuilder query = new StringBuilder("SELECT ambulance_id, registration_number, driver_name, type, status, location FROM Ambulance WHERE 1=1");
+
+    // Add conditions based on combo box selections
+    if (!selectedType.equals("All")) {
+        query.append(" AND type = '").append(selectedType).append("'");
+    }
+    if (!selectedLocation.equals("All")) {
+        query.append(" AND location = '").append(selectedLocation).append("'");
+    }
+    if (!selectedStatus.equals("All")) {
+        query.append(" AND status = '").append(selectedStatus).append("'");
+    }
+
+    // Database connection details
+    String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
+    String username = "root";
+    String password = "mysql";
+
+    try (Connection conn = DriverManager.getConnection(url, username, password);
+         Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery(query.toString())) {
+
+        // Iterate through the result set and add rows to the table model
+        while (rs.next()) {
+            String ambulanceId = rs.getString("ambulance_id");
+            String registrationNo = rs.getString("registration_number");
+            String driverName = rs.getString("driver_name");
+            String type = rs.getString("type");
+            String status = rs.getString("status");
+            String location = rs.getString("location");
+            model.addRow(new Object[]{ambulanceId, registrationNo, driverName, type, status, location});
+        }
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, "Error fetching data: " + e.getMessage());
+    }
+}
+
+
+
+private void populateSortedAmbulancesTable(JTable tb) {
+    // Clear existing data from the table
+    DefaultTableModel model = (DefaultTableModel) tb.getModel();
+    model.setRowCount(0); // Remove all rows
+    
+    // Get selected values from combo boxes
+    String selectedType = cbType.getSelectedItem().toString();
+    String selectedLocation = cbLocation.getSelectedItem().toString();
+    String selectedStatus = cbStatus.getSelectedItem().toString();
+
+    // Start building the SQL query for Show All with sorting
+    StringBuilder query = new StringBuilder("SELECT ambulance_id, registration_number, driver_name, type, status, location FROM Ambulance WHERE 1=1");
+
+    // Add conditions based on combo box selections
+    if (!selectedType.equals("All")) {
+        query.append(" AND type = '").append(selectedType).append("'");
+    }
+    if (!selectedLocation.equals("All")) {
+        query.append(" AND location = '").append(selectedLocation).append("'");
+    }
+    if (!selectedStatus.equals("All")) {
+        query.append(" AND status = '").append(selectedStatus).append("'");
+    }
+    
+    // Optionally add sorting (for example, by location and status)
+    query.append(" ORDER BY location, status");  // Add sorting criteria here
+
+    // Database connection details
+    String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
+    String username = "root";
+    String password = "mysql";
+    
+    try (Connection conn = DriverManager.getConnection(url, username, password);
+         Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery(query.toString())) {
+
+        // Iterate through the result set and add rows to the table model
+        while (rs.next()) {
+            String ambulanceId = rs.getString("ambulance_id");
+            String registrationNo = rs.getString("registration_number");
+            String driverName = rs.getString("driver_name");
+            String type = rs.getString("type");
+            String status = rs.getString("status");
+            String location = rs.getString("location");
+            model.addRow(new Object[]{ambulanceId, registrationNo, driverName, type, status, location});
+        }
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, "Error fetching data: " + e.getMessage());
+    }
+}
+
+
+}
+
 
 }
     
