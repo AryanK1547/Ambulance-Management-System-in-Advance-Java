@@ -624,9 +624,9 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(39, 39, 39)
                         .addComponent(btnShowAddAmbulancePanel)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnShowUpdateAmbulancePanel)
                         .addGap(18, 18, 18)
                         .addComponent(btnShowRemoveAmbulancePanel)
@@ -635,7 +635,7 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(270, 270, 270)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 6, Short.MAX_VALUE)
                 .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -747,9 +747,9 @@ public class AmbulanceManagerFromPanel extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUpdateAmbulanceIDjTextField5ActionPerformed
 
     private void btnShowRemoveAmbulancePanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowRemoveAmbulancePanelActionPerformed
-      initializeRemoveFiterComboBoxes();
+   initializeRemoveFiterComboBoxes();
       
-        mainPanel.removeAll();
+    mainPanel.removeAll();
     mainPanel.add(removeAmbulancePanel);
    
 
@@ -1344,38 +1344,38 @@ private void deleteAmbulance(String ambulanceId) {
 
 
 
-    private void showAmbulanceRemovePanel() {
-         populateAmbulanceTable(tableRemoveAmbulance); // Call method to populate the table
-    
-    // Switch to the panel containing the remove functionality
-    
-    // Add a mouse listener to the table for row selection and deletion
-    tableRemoveAmbulance.addMouseListener(new MouseAdapter() {
-        @Override
-        public void mouseClicked(MouseEvent e) {
-            int selectedRow = tableRemoveAmbulance.getSelectedRow();
-            if (selectedRow != -1) {
-                // Get the ambulance ID of the selected row
-                String ambulanceId = tableRemoveAmbulance.getValueAt(selectedRow, 0).toString();
-
-                // Confirm deletion
-                int confirm = JOptionPane.showConfirmDialog(null, 
-                        "Are you sure you want to delete Ambulance ID: " + ambulanceId + "?",
-                        "Confirm Deletion", JOptionPane.YES_NO_OPTION);
-                
-                if (confirm == JOptionPane.YES_OPTION) {
-                    deleteAmbulance(ambulanceId); // Call delete method
-                    DefaultTableModel tableModel = (DefaultTableModel) tableRemoveAmbulance.getModel();
-                    tableModel.removeRow(selectedRow);
-                }
-            }
-        }
-    });
-
-    // Refresh panel view
-    mainPanel.repaint();
-    mainPanel.revalidate();
-}
+//    private void showAmbulanceRemovePanel() {
+//         populateAmbulanceTable(tableRemoveAmbulance); // Call method to populate the table
+//    
+//    // Switch to the panel containing the remove functionality
+//    
+//    // Add a mouse listener to the table for row selection and deletion
+//    tableRemoveAmbulance.addMouseListener(new MouseAdapter() {
+//        @Override
+//        public void mouseClicked(MouseEvent e) {
+//            int selectedRow = tableRemoveAmbulance.getSelectedRow();
+//            if (selectedRow != -1) {
+//                // Get the ambulance ID of the selected row
+//                String ambulanceId = tableRemoveAmbulance.getValueAt(selectedRow, 0).toString();
+//
+//                // Confirm deletion
+//                int confirm = JOptionPane.showConfirmDialog(null, 
+//                        "Are you sure you want to delete Ambulance ID: " + ambulanceId + "?",
+//                        "Confirm Deletion", JOptionPane.YES_NO_OPTION);
+//                
+//                if (confirm == JOptionPane.YES_OPTION) {
+//                    deleteAmbulance(ambulanceId); // Call delete method
+//                    DefaultTableModel tableModel = (DefaultTableModel) tableRemoveAmbulance.getModel();
+//                    tableModel.removeRow(selectedRow);
+//                }
+//            }
+//        }
+//    });
+//
+//    // Refresh panel view
+//    mainPanel.repaint();
+//    mainPanel.revalidate();
+//}
     // Assuming you have these JComboBoxes defined in your class
 // Method to populate the combo boxes
 private void populateComboBoxes() {
@@ -1536,62 +1536,62 @@ private void populateRemoveAllAmbulancesTable(JTable tb) {
 
 
 
-private void populateSortedAmbulancesTable(JTable tb) {
-    // Clear existing data from the table
-    DefaultTableModel model = (DefaultTableModel) tb.getModel();
-    model.setRowCount(0); // Remove all rows
-    
-    // Get selected values from combo boxes
-    String selectedType = cbType.getSelectedItem().toString();
-    String selectedLocation = cbLocation.getSelectedItem().toString();
-    String selectedStatus = cbStatus.getSelectedItem().toString();
-
-    // Start building the SQL query for Show All with sorting
-    StringBuilder query = new StringBuilder("SELECT ambulance_id, registration_number, driver_name, type, status, location FROM Ambulance WHERE 1=1");
-
-    // Add conditions based on combo box selections
-    if (!selectedType.equals("All")) {
-        query.append(" AND type = '").append(selectedType).append("'");
-    }
-    if (!selectedLocation.equals("All")) {
-        query.append(" AND location = '").append(selectedLocation).append("'");
-    }
-    if (!selectedStatus.equals("All")) {
-        query.append(" AND status = '").append(selectedStatus).append("'");
-    }
-    
-    // Optionally add sorting (for example, by location and status)
-    query.append(" ORDER BY location, status");  // Add sorting criteria here
-
-    // Database connection details
-    String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
-    String username = "root";
-    String password = "mysql";
-    
-    try (Connection conn = DriverManager.getConnection(url, username, password);
-         Statement stmt = conn.createStatement();
-         ResultSet rs = stmt.executeQuery(query.toString())) {
-
-        // Iterate through the result set and add rows to the table model
-        while (rs.next()) {
-            String ambulanceId = rs.getString("ambulance_id");
-            String registrationNo = rs.getString("registration_number");
-            String driverName = rs.getString("driver_name");
-            String type = rs.getString("type");
-            String status = rs.getString("status");
-            String location = rs.getString("location");
-            model.addRow(new Object[]{ambulanceId, registrationNo, driverName, type, status, location});
-        }
-    } catch (SQLException e) {
-        JOptionPane.showMessageDialog(null, "Error fetching data: " + e.getMessage());
-    }
-}
-
-
-}
+//private void populateSortedAmbulancesTable(JTable tb) {
+//    // Clear existing data from the table
+//    DefaultTableModel model = (DefaultTableModel) tb.getModel();
+//    model.setRowCount(0); // Remove all rows
+//    
+//    // Get selected values from combo boxes
+//    String selectedType = cbType.getSelectedItem().toString();
+//    String selectedLocation = cbLocation.getSelectedItem().toString();
+//    String selectedStatus = cbStatus.getSelectedItem().toString();
+//
+//    // Start building the SQL query for Show All with sorting
+//    StringBuilder query = new StringBuilder("SELECT ambulance_id, registration_number, driver_name, type, status, location FROM Ambulance WHERE 1=1");
+//
+//    // Add conditions based on combo box selections
+//    if (!selectedType.equals("All")) {
+//        query.append(" AND type = '").append(selectedType).append("'");
+//    }
+//    if (!selectedLocation.equals("All")) {
+//        query.append(" AND location = '").append(selectedLocation).append("'");
+//    }
+//    if (!selectedStatus.equals("All")) {
+//        query.append(" AND status = '").append(selectedStatus).append("'");
+//    }
+//    
+//    // Optionally add sorting (for example, by location and status)
+//    query.append(" ORDER BY location, status");  // Add sorting criteria here
+//
+//    // Database connection details
+//    String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
+//    String username = "root";
+//    String password = "mysql";
+//    
+//    try (Connection conn = DriverManager.getConnection(url, username, password);
+//         Statement stmt = conn.createStatement();
+//         ResultSet rs = stmt.executeQuery(query.toString())) {
+//
+//        // Iterate through the result set and add rows to the table model
+//        while (rs.next()) {
+//            String ambulanceId = rs.getString("ambulance_id");
+//            String registrationNo = rs.getString("registration_number");
+//            String driverName = rs.getString("driver_name");
+//            String type = rs.getString("type");
+//            String status = rs.getString("status");
+//            String location = rs.getString("location");
+//            model.addRow(new Object[]{ambulanceId, registrationNo, driverName, type, status, location});
+//        }
+//    } catch (SQLException e) {
+//        JOptionPane.showMessageDialog(null, "Error fetching data: " + e.getMessage());
+//    }
+//}
 
 
 }
+
+
+
     
 
 
