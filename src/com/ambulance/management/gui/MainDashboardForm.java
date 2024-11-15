@@ -5,6 +5,17 @@
 package com.ambulance.management.gui;
 
 import javax.swing.JOptionPane;
+// Import statements should be placed here
+import com.ambulance.management.gui.PatientSession;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
 
 /**
  *
@@ -28,6 +39,7 @@ public class MainDashboardForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel12 = new javax.swing.JLabel();
         LoginNavigationPanel = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -42,26 +54,17 @@ public class MainDashboardForm extends javax.swing.JFrame {
         txtAdminUsername = new javax.swing.JTextField();
         btnAdminLogin = new javax.swing.JButton();
         txtAdminPassword = new javax.swing.JPasswordField();
-        PatientSignInPanel = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        btnJumpLogin = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        lblUsername = new javax.swing.JLabel();
-        txtUsername = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JPasswordField();
-        lblPassword = new javax.swing.JLabel();
-        lblEmail = new javax.swing.JLabel();
-        txtEmail = new javax.swing.JTextField();
-        btnSignUp = new javax.swing.JButton();
         PatientLoginPanel = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txtPatientUsername = new javax.swing.JTextField();
+        txtLogInUsername = new javax.swing.JTextField();
         btnPatientLogin = new javax.swing.JButton();
-        txtPatientPassword = new javax.swing.JPasswordField();
+        txtLogInPassword = new javax.swing.JPasswordField();
         jLabel9 = new javax.swing.JLabel();
         btnJumpSignIn = new javax.swing.JButton();
+
+        jLabel12.setText("jLabel12");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -189,96 +192,6 @@ public class MainDashboardForm extends javax.swing.JFrame {
 
         LoginModulesPanel.add(AdminLoginPanel, "card2");
 
-        jLabel10.setText("Already have an account ?");
-
-        btnJumpLogin.setText("Log-In");
-        btnJumpLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnJumpLoginActionPerformed(evt);
-            }
-        });
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel11.setText("Sign-In");
-
-        lblUsername.setText("Username");
-
-        lblPassword.setText("Password");
-
-        lblEmail.setText("Email");
-
-        txtEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEmailActionPerformed(evt);
-            }
-        });
-
-        btnSignUp.setText("Sign-Up");
-        btnSignUp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSignUpActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout PatientSignInPanelLayout = new javax.swing.GroupLayout(PatientSignInPanel);
-        PatientSignInPanel.setLayout(PatientSignInPanelLayout);
-        PatientSignInPanelLayout.setHorizontalGroup(
-            PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                        .addGap(153, 153, 153)
-                        .addComponent(btnJumpLogin))
-                    .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblUsername)
-                            .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblEmail)
-                                .addComponent(lblPassword)))
-                        .addGap(34, 34, 34)
-                        .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                                .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel10)
-                                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                                        .addGap(37, 37, 37)
-                                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addGap(23, 23, 23))
-        );
-        PatientSignInPanelLayout.setVerticalGroup(
-            PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblUsername))
-                .addGap(18, 18, 18)
-                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPassword)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblEmail)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSignUp))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnJumpLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36))
-        );
-
-        LoginModulesPanel.add(PatientSignInPanel, "card4");
-
         jLabel6.setText("Patient Login");
 
         jLabel7.setText("Username");
@@ -286,8 +199,11 @@ public class MainDashboardForm extends javax.swing.JFrame {
         jLabel8.setText("Password");
 
         btnPatientLogin.setText("Login");
-
-        txtPatientPassword.setText("jPasswordField1");
+        btnPatientLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPatientLoginActionPerformed(evt);
+            }
+        });
 
         jLabel9.setText("Don't have an Account? ");
         jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -312,8 +228,8 @@ public class MainDashboardForm extends javax.swing.JFrame {
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
                 .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtPatientUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-                    .addComponent(txtPatientPassword))
+                    .addComponent(txtLogInUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                    .addComponent(txtLogInPassword))
                 .addGap(78, 78, 78))
             .addGroup(PatientLoginPanelLayout.createSequentialGroup()
                 .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -338,10 +254,10 @@ public class MainDashboardForm extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(txtPatientUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtLogInUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPatientPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtLogInPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnPatientLogin)
@@ -371,7 +287,7 @@ public class MainDashboardForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(LoginNavigationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(LoginModulesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                .addComponent(LoginModulesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 213, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -388,38 +304,13 @@ public class MainDashboardForm extends javax.swing.JFrame {
 
     private void btnJumpSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJumpSignInActionPerformed
         // TODO add your handling code here:
-        LoginModulesPanel.removeAll();
-       
-        LoginModulesPanel.add(PatientSignInPanel);
-        LoginModulesPanel.repaint();
-        LoginModulesPanel.revalidate(); 
+        
 
     }//GEN-LAST:event_btnJumpSignInActionPerformed
 
-    private void btnJumpLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJumpLoginActionPerformed
-        // TODO add your handling code here:
-         LoginModulesPanel.removeAll();
-       
-        LoginModulesPanel.add(PatientLoginPanel);
-        LoginModulesPanel.repaint();
-        LoginModulesPanel.revalidate(); 
-    }//GEN-LAST:event_btnJumpLoginActionPerformed
-
-    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmailActionPerformed
-
-    private void btnSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignUpActionPerformed
-        // TODO add your handling code here:
-        
-
-    }//GEN-LAST:event_btnSignUpActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        LoginModulesPanel.removeAll();   
-        LoginModulesPanel.add(PatientSignInPanel);
-        LoginModulesPanel.repaint();
-        LoginModulesPanel.revalidate();         // TODO add your handling code here:
+        PatientRequestForm form =new PatientRequestForm();    
+        form.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btnShowPatientLoginPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowPatientLoginPanelActionPerformed
@@ -442,6 +333,11 @@ public class MainDashboardForm extends javax.swing.JFrame {
      }
 
     }//GEN-LAST:event_btnAdminLoginActionPerformed
+
+    private void btnPatientLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientLoginActionPerformed
+        // TODO add your handling code here:
+        loginPatient();
+    }//GEN-LAST:event_btnPatientLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -483,18 +379,14 @@ public class MainDashboardForm extends javax.swing.JFrame {
     private javax.swing.JPanel LoginModulesPanel;
     private javax.swing.JPanel LoginNavigationPanel;
     private javax.swing.JPanel PatientLoginPanel;
-    private javax.swing.JPanel PatientSignInPanel;
     private javax.swing.JButton btnAdminLogin;
-    private javax.swing.JButton btnJumpLogin;
     private javax.swing.JButton btnJumpSignIn;
     private javax.swing.JButton btnPatientLogin;
     private javax.swing.JButton btnShowPatientLoginPanel;
-    private javax.swing.JButton btnSignUp;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -503,15 +395,58 @@ public class MainDashboardForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel lblEmail;
-    private javax.swing.JLabel lblPassword;
-    private javax.swing.JLabel lblUsername;
     private javax.swing.JPasswordField txtAdminPassword;
     private javax.swing.JTextField txtAdminUsername;
-    private javax.swing.JTextField txtEmail;
-    private javax.swing.JPasswordField txtPassword;
-    private javax.swing.JPasswordField txtPatientPassword;
-    private javax.swing.JTextField txtPatientUsername;
-    private javax.swing.JTextField txtUsername;
+    private javax.swing.JPasswordField txtLogInPassword;
+    private javax.swing.JTextField txtLogInUsername;
     // End of variables declaration//GEN-END:variables
+
+      private void loginPatient() {
+    // Database connection details
+    String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
+    String username = "root";
+    String password = "mysql";
+
+    // Get login credentials
+    String patientUsername = txtLogInUsername.getText();
+    String patientPassword = new String(txtLogInPassword.getPassword());
+
+    // Ensure fields are not empty
+    if (patientUsername.isEmpty() || patientPassword.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Username and password are required.");
+        return;
+    }
+
+    // SQL query
+    String query = "SELECT patient_id, name FROM Patient WHERE username = ? AND password = ?";
+
+    try (Connection conn = DriverManager.getConnection(url, username, password);
+         PreparedStatement stmt = conn.prepareStatement(query)) {
+
+        stmt.setString(1, patientUsername);
+        stmt.setString(2, patientPassword);
+
+        try (ResultSet rs = stmt.executeQuery()) {
+            if (rs.next()) {
+                int patientId = rs.getInt("patient_id");
+                String patientName = rs.getString("name");
+
+                JOptionPane.showMessageDialog(null, "Login successful! Welcome, " + patientName);
+                PatientAssignment pa=new PatientAssignment();
+                
+                this.dispose();
+                pa.setVisible(true);
+
+                
+ 
+                
+            } else {
+                JOptionPane.showMessageDialog(null, "Invalid username or password.");
+            }
+        }
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, "Error during login: " + e.getMessage());
+    }
+}
+
 }

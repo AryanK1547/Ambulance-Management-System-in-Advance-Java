@@ -47,102 +47,100 @@ public class PatientRequestForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        patientRequestPanel = new javax.swing.JPanel();
+        PatientSignInPanel = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        btnJumpLogin = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        lblUsername = new javax.swing.JLabel();
+        txtSignInUsername = new javax.swing.JTextField();
+        txtSignInPassword = new javax.swing.JPasswordField();
+        lblPassword = new javax.swing.JLabel();
+        btnSignUp = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
         txtPatientName = new javax.swing.JTextField();
-        btnRegisterPatient = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        cbPatientAmbulanceType = new javax.swing.JComboBox<>();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        txtContactInfo = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jLabel11 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        tableAvailableAmbulance = new javax.swing.JTable();
         cbPatientGender = new javax.swing.JComboBox<>();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        txtSignInAge = new javax.swing.JTextField();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        txtSignInDesp = new javax.swing.JTextArea();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         cbPatientNearestLandmark = new javax.swing.JComboBox<>();
-        jLabel3 = new javax.swing.JLabel();
-        btnBookAmbulance = new javax.swing.JButton();
+        txtContactInfo = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        cbPatientAmbulanceType = new javax.swing.JComboBox<>();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        txtSignInAddress = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnRegisterPatient.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnRegisterPatient.setText("Find  Ambulance");
-        btnRegisterPatient.setActionCommand("btnRegisterPatient");
-        btnRegisterPatient.addActionListener(new java.awt.event.ActionListener() {
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        jLabel12.setText("Already have an account ?");
+
+        btnJumpLogin.setBackground(new java.awt.Color(0, 204, 51));
+        btnJumpLogin.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnJumpLogin.setForeground(new java.awt.Color(0, 0, 0));
+        btnJumpLogin.setText("Log-In");
+        btnJumpLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegisterPatientActionPerformed(evt);
+                btnJumpLoginActionPerformed(evt);
             }
         });
 
-        cbPatientAmbulanceType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Basic Life Support (BLS)", "Advanced Life Support (ALS)", "Patient Transport Vehicle (PTV)", "Neonatal Ambulance", "Air Ambulance" }));
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        jLabel13.setText("Sign-In");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        lblUsername.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblUsername.setText("Set Username");
 
-        jLabel1.setText("Patient Name");
+        txtSignInUsername.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        jLabel2.setText("Age");
+        txtSignInPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        jLabel5.setText("Location ");
+        lblPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblPassword.setText("Set Password");
 
-        jLabel6.setFont(new java.awt.Font("Tw Cen MT", 3, 24)); // NOI18N
-        jLabel6.setText("Patient Registration & Assignment");
-
-        jLabel7.setText("Condition Discription: ");
-
-        jLabel8.setText("Gender");
-
-        jLabel9.setText("Contact Info");
-
-        txtContactInfo.addActionListener(new java.awt.event.ActionListener() {
+        btnSignUp.setBackground(new java.awt.Color(0, 153, 153));
+        btnSignUp.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnSignUp.setForeground(new java.awt.Color(255, 255, 255));
+        btnSignUp.setText("Sign-Up");
+        btnSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtContactInfoActionPerformed(evt);
+                btnSignUpActionPerformed(evt);
             }
         });
 
-        jLabel10.setText("Type Of Ambulance");
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel14.setText("Patient Name");
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        txtPatientName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        jLabel11.setText("Address :");
-
-        tableAvailableAmbulance.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "Ambulance ID", "Registration Number", "Driver Name", "Type Of Ambulance", "Status", "Location"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, true, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane3.setViewportView(tableAvailableAmbulance);
-
+        cbPatientGender.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cbPatientGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
 
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel15.setText("Gender");
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel16.setText("Age");
+
+        txtSignInAge.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        txtSignInDesp.setColumns(20);
+        txtSignInDesp.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtSignInDesp.setRows(5);
+        jScrollPane4.setViewportView(txtSignInDesp);
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel17.setText("Condition Discription: ");
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel18.setText("Location ");
+
+        cbPatientNearestLandmark.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cbPatientNearestLandmark.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Central Hospital", "North Wing Health Center", "East District Hospital", "West Side Clinic", "South Regional Hospital" }));
         cbPatientNearestLandmark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,207 +148,192 @@ public class PatientRequestForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Available Ambulance");
-
-        btnBookAmbulance.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnBookAmbulance.setText("Book");
-        btnBookAmbulance.addActionListener(new java.awt.event.ActionListener() {
+        txtContactInfo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtContactInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBookAmbulanceActionPerformed(evt);
+                txtContactInfoActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout patientRequestPanelLayout = new javax.swing.GroupLayout(patientRequestPanel);
-        patientRequestPanel.setLayout(patientRequestPanelLayout);
-        patientRequestPanelLayout.setHorizontalGroup(
-            patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, patientRequestPanelLayout.createSequentialGroup()
-                .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(cbPatientGender, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(77, 77, 77)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                        .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                                .addGap(84, 84, 84)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                                .addGap(245, 245, 245)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(65, 65, 65))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, patientRequestPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, patientRequestPanelLayout.createSequentialGroup()
-                        .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                                    .addGap(29, 29, 29)
-                                    .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                                .addGap(31, 31, 31)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                                .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane1)
-                                    .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                                        .addComponent(cbPatientNearestLandmark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel19.setText("Contact Info");
+
+        cbPatientAmbulanceType.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cbPatientAmbulanceType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Basic Life Support (BLS)", "Advanced Life Support (ALS)", "Patient Transport Vehicle (PTV)", "Neonatal Ambulance", "Air Ambulance" }));
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel20.setText("Type Of Ambulance");
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel21.setText("Address :");
+
+        txtSignInAddress.setColumns(20);
+        txtSignInAddress.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtSignInAddress.setRows(5);
+        jScrollPane5.setViewportView(txtSignInAddress);
+
+        javax.swing.GroupLayout PatientSignInPanelLayout = new javax.swing.GroupLayout(PatientSignInPanel);
+        PatientSignInPanel.setLayout(PatientSignInPanelLayout);
+        PatientSignInPanelLayout.setHorizontalGroup(
+            PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
+                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
+                        .addGap(411, 411, 411)
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(448, 448, 448))
+                    .addGroup(PatientSignInPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
+                        .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane4)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
+                                .addComponent(jScrollPane5)
+                                .addGap(24, 24, 24)
+                                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(PatientSignInPanelLayout.createSequentialGroup()
+                                        .addComponent(lblPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(txtContactInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(cbPatientAmbulanceType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                        .addGap(52, 52, 52)
-                                        .addComponent(btnRegisterPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(114, 114, 114))
-                            .addGroup(patientRequestPanelLayout.createSequentialGroup()
+                                        .addComponent(txtSignInPassword))
+                                    .addGroup(PatientSignInPanelLayout.createSequentialGroup()
+                                        .addComponent(lblUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtSignInUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(5, 5, 5))
+                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
                                 .addComponent(txtPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(678, 678, 678))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, patientRequestPanelLayout.createSequentialGroup()
-                        .addComponent(jScrollPane3)
-                        .addContainerGap())))
-            .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                .addGap(315, 315, 315)
-                .addComponent(btnBookAmbulance, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        patientRequestPanelLayout.setVerticalGroup(
-            patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(patientRequestPanelLayout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(cbPatientGender, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(47, 47, 47)
+                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtSignInAge, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(78, 78, 78)
+                                .addComponent(jLabel19)
+                                .addGap(36, 36, 36)
+                                .addComponent(txtContactInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE))
+                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
+                                .addComponent(cbPatientNearestLandmark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(63, 63, 63)
+                                .addComponent(jLabel20)
+                                .addGap(45, 45, 45)
+                                .addComponent(cbPatientAmbulanceType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addGap(88, 88, 88))
+            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbPatientGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(txtPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))))
-                .addGap(18, 18, 18)
-                .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(jLabel7)))
-                .addGap(18, 18, 18)
-                .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(txtContactInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbPatientNearestLandmark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                                .addGroup(patientRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel10)
-                                    .addComponent(cbPatientAmbulanceType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(25, 25, 25)
-                                .addComponent(jLabel11))
-                            .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(patientRequestPanelLayout.createSequentialGroup()
-                        .addGap(86, 86, 86)
-                        .addComponent(btnRegisterPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(24, 24, 24)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(btnBookAmbulance, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(jLabel4))
+                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
+                        .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(550, 550, 550))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addGap(535, 535, 535))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
+                        .addComponent(btnJumpLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(582, 582, 582))))
+        );
+        PatientSignInPanelLayout.setVerticalGroup(
+            PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
+                .addGap(9, 9, 9)
+                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(PatientSignInPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel16)
+                                        .addComponent(txtSignInAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cbPatientGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel15)
+                                        .addComponent(txtPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel14))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel19)
+                                        .addComponent(txtContactInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(cbPatientNearestLandmark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel18)
+                                    .addComponent(jLabel20)
+                                    .addComponent(cbPatientAmbulanceType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
+                                .addGap(77, 77, 77)
+                                .addComponent(jLabel17)))
+                        .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
+                                .addGap(35, 35, 35)
+                                .addComponent(jLabel21)
+                                .addGap(30, 30, 30)
+                                .addComponent(lblPassword))
+                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblUsername)
+                                    .addComponent(txtSignInUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(txtSignInPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+                .addComponent(btnSignUp)
+                .addGap(48, 48, 48)
+                .addComponent(jLabel12)
+                .addGap(72, 72, 72)
+                .addComponent(btnJumpLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(129, 129, 129))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addComponent(patientRequestPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(158, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PatientSignInPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addComponent(patientRequestPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(PatientSignInPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnRegisterPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterPatientActionPerformed
+    private void btnJumpLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJumpLoginActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnJumpLoginActionPerformed
+
+    private void btnSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignUpActionPerformed
         // TODO add your handling code here:
         savePatientData();
-        populateAvailableAmbulancesTable();
-    
-    // Register patient in the database
-   // Implement this method to save patient data
-    
-    // Confirm registratio
-    }//GEN-LAST:event_btnRegisterPatientActionPerformed
+        MainDashboardForm mdb=new MainDashboardForm();
+        mdb.setVisible(true);
+        
+    }//GEN-LAST:event_btnSignUpActionPerformed
 
     private void cbPatientNearestLandmarkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPatientNearestLandmarkActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbPatientNearestLandmarkActionPerformed
-
-    private void btnBookAmbulanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBookAmbulanceActionPerformed
-      // Step 1: Get patient ID using contact information (assuming contactInfo is an integer)
-   String contactInfo = txtContactInfo.getText();  // Assuming this is where the contact info is coming from
-
-    // Step 1: Get patient ID using contact information (contact info is a String)
-    int patientId = getPatientIdByContact(contactInfo);
-
-    if (patientId == -1) {
-        JOptionPane.showMessageDialog(this, "Patient not found with the provided contact info.");
-        return;  // Exit the method if the patient is not found
-    }
-
-    // Step 2: Retrieve the selected ambulance ID from the JTable
-    int selectedRow = tableAvailableAmbulance.getSelectedRow();  // Assuming ambulanceTable is your JTable
-    if (selectedRow != -1) {
-        String selectedAmbulanceId = (String) tableAvailableAmbulance.getValueAt(selectedRow, 0);  // Column 0 holds Ambulance ID
-
-        if (selectedAmbulanceId != null && !selectedAmbulanceId.isEmpty()) {
-            // Step 3: Call the method to assign the ambulance to the patient
-            assignAmbulanceToPatient(patientId, selectedAmbulanceId);
-        } else {
-            JOptionPane.showMessageDialog(this, "No ambulance selected.");
-        }
-    } else {
-        JOptionPane.showMessageDialog(this, "Please select an ambulance.");
-    }
-       // TODO add your handling code here:
-    }//GEN-LAST:event_btnBookAmbulanceActionPerformed
 
     private void txtContactInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContactInfoActionPerformed
         // TODO add your handling code here:
@@ -392,7 +375,7 @@ public class PatientRequestForm extends javax.swing.JFrame {
         
     }
     
-    private void savePatientData() {
+        private void savePatientData() {
        
     // Database connection details
     String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
@@ -401,42 +384,50 @@ public class PatientRequestForm extends javax.swing.JFrame {
 
     // Get patient data from form fields
     String name = txtPatientName.getText();
-    int age = Integer.parseInt(jTextField1.getText()); // assuming age is in jTextField1
+    int age = Integer.parseInt(txtSignInAge.getText()); // assuming age is in jTextField1
     String gender = cbPatientGender.getSelectedItem().toString();
     String contactInfo = txtContactInfo.getText();
     String typeOfAmbulance = cbPatientAmbulanceType.getSelectedItem().toString();
-    String address = jTextArea1.getText();
+    String address = txtSignInAddress.getText();
     String nearest_landmark = cbPatientNearestLandmark.getSelectedItem().toString();
-    String conditionDescription = jTextArea2.getText();
+    String conditionDescription = txtSignInDesp.getText();
+        String patientUsername = txtSignInUsername.getText();
+
+            String patientPassword = txtSignInPassword.getText();
+
+    
 
     // SQL insert query
-    String query = "INSERT INTO Patient (name, age, gender, contact_info, type_of_ambulance, address, nearest_landmark, condition_description) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    String query = "INSERT INTO Patient (username,password,name, age, gender, contact_info, type_of_ambulance, address, nearest_landmark, condition_description) VALUES (?,?,?, ?, ?, ?, ?, ?, ?, ?)";
 
     try (Connection conn = DriverManager.getConnection(url, username, password);
          PreparedStatement stmt = conn.prepareStatement(query)) {
 
         // Set parameters for the query
-        stmt.setString(1, name);
-        stmt.setInt(2, age);
-        stmt.setString(3, gender);
-        stmt.setString(4, contactInfo);
-        stmt.setString(5, typeOfAmbulance);
-        stmt.setString(6, address);
-        stmt.setString(7, nearest_landmark);
-        stmt.setString(8, conditionDescription);
+        stmt.setString(1, patientUsername);
+        stmt.setString(2, patientPassword);
+        stmt.setString(3, name);
+        stmt.setInt(4, age);
+        stmt.setString(5, gender);
+        stmt.setString(6, contactInfo);
+        stmt.setString(7, typeOfAmbulance);
+        stmt.setString(8, address);
+        stmt.setString(9, nearest_landmark);
+        stmt.setString(10, conditionDescription);
 
         // Execute the update
         stmt.executeUpdate();
         JOptionPane.showMessageDialog(null, "Patient registered successfully!");
+        this.dispose();
 
 
 // After patient registration, you can store their ID:
-        currentPatientId = getPatientIdByContact(contactInfo);
+        int currentPatientId = PatientSession.getInstance().getPatientId();
     } catch (SQLException e) {
         JOptionPane.showMessageDialog(null, "Error registering patient: " + e.getMessage());
     }
-    
-}
+    }
+
    private int getPatientIdByContact(String contactInfo) {
   
     int patientId = -1;  // Default value if patient not found
@@ -461,158 +452,159 @@ public class PatientRequestForm extends javax.swing.JFrame {
     return patientId;  // Return the patient ID or -1 if not found
 }
 
-
-    private void populateAvailableAmbulancesTable() {
-    DefaultTableModel model = (DefaultTableModel) tableAvailableAmbulance.getModel();
-    model.setRowCount(0); // Clear existing rows
-      String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
-    String username = "root";
-    String password = "mysql";
-    
-    // SQL query to select ambulances based on patient preferences
-    String query = "SELECT ambulance_id, registration_number, driver_name, type, status, location " +
-                   "FROM Ambulance WHERE status = 'Available' AND location = ? AND type = ?";
-    String patientLocation = cbPatientNearestLandmark.getSelectedItem().toString();
-    String patientAmbulanceType= cbPatientAmbulanceType.getSelectedItem().toString();
-    
-    // Assuming we have patient’s location and type from registration
-    try (Connection conn = DriverManager.getConnection(url, username, password);
-         PreparedStatement stmt = conn.prepareStatement(query)) {
-        stmt.setString(1, patientLocation);
-        stmt.setString(2, patientAmbulanceType);
-
-        ResultSet rs = stmt.executeQuery();
-        while (rs.next()) {
-            model.addRow(new Object[]{
-                rs.getString("ambulance_id"),
-                rs.getString("registration_number"),
-                rs.getString("driver_name"),
-                rs.getString("type"),
-                rs.getString("status"),
-                rs.getString("location")
-            });
-        }
-    } catch (SQLException e) {
-        JOptionPane.showMessageDialog(null, "Error loading ambulances: " + e.getMessage());
-    }
-    
-}
-    public void assignAmbulanceToPatient(String contactInfo, String ambulanceId) {
-        int patientId = getPatientIdByContact(contactInfo);
-        
-        if (patientId == -1) {
-            System.out.println("Patient not found.");
-            return;
-        }
-        
-        try {
-            String assignQuery = "INSERT INTO AmbulanceAssignment (patient_id, ambulance_id, status) VALUES (?, ?, ?)";
-            PreparedStatement stmt = connection.prepareStatement(assignQuery);
-            stmt.setInt(1, patientId);  // Use the retrieved patient ID
-            stmt.setString(2, ambulanceId);  // Use selected ambulance ID
-            stmt.setString(3, "Assigned");  // Default status to "Assigned"
-            stmt.executeUpdate();
-            
-            // Update the ambulance status to "Assigned"
-            String updateAmbulanceQuery = "UPDATE Ambulance SET status = 'Assigned' WHERE ambulance_id = ?";
-            PreparedStatement updateStmt = connection.prepareStatement(updateAmbulanceQuery);
-            updateStmt.setString(1, ambulanceId);
-            updateStmt.executeUpdate();
-            
-            System.out.println("Ambulance successfully assigned to patient.");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // Method to close the database connection
-    public void closeDBConnection() {
-        try {
-            if (connection != null && !connection.isClosed()) {
-                connection.close();
-                System.out.println("Database connection closed.");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+//
+//    private void populateAvailableAmbulancesTable() {
+//    DefaultTableModel model = (DefaultTableModel) tableAvailableAmbulance.getModel();
+//    model.setRowCount(0); // Clear existing rows
+//      String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
+//    String username = "root";
+//    String password = "mysql";
+//    
+//    // SQL query to select ambulances based on patient preferences
+//    String query = "SELECT ambulance_id, registration_number, driver_name, type, status, location " +
+//                   "FROM Ambulance WHERE status = 'Available' AND location = ? AND type = ?";
+//    String patientLocation = cbPatientNearestLandmark.getSelectedItem().toString();
+//    String patientAmbulanceType= cbPatientAmbulanceType.getSelectedItem().toString();
+//    
+//    // Assuming we have patient’s location and type from registration
+//    try (Connection conn = DriverManager.getConnection(url, username, password);
+//         PreparedStatement stmt = conn.prepareStatement(query)) {
+//        stmt.setString(1, patientLocation);
+//        stmt.setString(2, patientAmbulanceType);
+//
+//        ResultSet rs = stmt.executeQuery();
+//        while (rs.next()) {
+//            model.addRow(new Object[]{
+//                rs.getString("ambulance_id"),
+//                rs.getString("registration_number"),
+//                rs.getString("driver_name"),
+//                rs.getString("type"),
+//                rs.getString("status"),
+//                rs.getString("location")
+//            });
+//        }
+//    } catch (SQLException e) {
+//        JOptionPane.showMessageDialog(null, "Error loading ambulances: " + e.getMessage());
+//    }
+//    
+//}
+//    public void assignAmbulanceToPatient(String contactInfo, String ambulanceId) {
+//        int patientId = getPatientIdByContact(contactInfo);
+//        
+//        if (patientId == -1) {
+//            System.out.println("Patient not found.");
+//            return;
+//        }
+//        
+//        try {
+//            String assignQuery = "INSERT INTO AmbulanceAssignment (patient_id, ambulance_id, status) VALUES (?, ?, ?)";
+//            PreparedStatement stmt = connection.prepareStatement(assignQuery);
+//            stmt.setInt(1, patientId);  // Use the retrieved patient ID
+//            stmt.setString(2, ambulanceId);  // Use selected ambulance ID
+//            stmt.setString(3, "Assigned");  // Default status to "Assigned"
+//            stmt.executeUpdate();
+//            
+//            // Update the ambulance status to "Assigned"
+//            String updateAmbulanceQuery = "UPDATE Ambulance SET status = 'Assigned' WHERE ambulance_id = ?";
+//            PreparedStatement updateStmt = connection.prepareStatement(updateAmbulanceQuery);
+//            updateStmt.setString(1, ambulanceId);
+//            updateStmt.executeUpdate();
+//            
+//            System.out.println("Ambulance successfully assigned to patient.");
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    // Method to close the database connection
+//    public void closeDBConnection() {
+//        try {
+//            if (connection != null && !connection.isClosed()) {
+//                connection.close();
+//                System.out.println("Database connection closed.");
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
     
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBookAmbulance;
-    private javax.swing.JButton btnRegisterPatient;
+    private javax.swing.JPanel PatientSignInPanel;
+    private javax.swing.JButton btnJumpLogin;
+    private javax.swing.JButton btnSignUp;
     private javax.swing.JComboBox<String> cbPatientAmbulanceType;
     private javax.swing.JComboBox<String> cbPatientGender;
     private javax.swing.JComboBox<String> cbPatientNearestLandmark;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JPanel patientRequestPanel;
-    private javax.swing.JTable tableAvailableAmbulance;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblUsername;
     private javax.swing.JTextField txtContactInfo;
     private javax.swing.JTextField txtPatientName;
+    private javax.swing.JTextArea txtSignInAddress;
+    private javax.swing.JTextField txtSignInAge;
+    private javax.swing.JTextArea txtSignInDesp;
+    private javax.swing.JPasswordField txtSignInPassword;
+    private javax.swing.JTextField txtSignInUsername;
     // End of variables declaration//GEN-END:variables
 
-    private void bookAmbulanceForPatient() {
-        
-    // Get the selected row from the available ambulances table
-    int selectedRow = tableAvailableAmbulance.getSelectedRow();
-    
-    if (selectedRow == -1) {
-        // If no row is selected, show a message
-        JOptionPane.showMessageDialog(this, "Please select an ambulance from the table.");
-        return;
-    }
-
-    // Get the ambulance ID from the selected row
-    String ambulanceId = tableAvailableAmbulance.getValueAt(selectedRow, 0).toString();
-
-    // Assuming you already have the patient details, for example:
-    String patientName = txtPatientName.getText();  // Get patient name from the text field
-
-    // SQL query to assign the selected ambulance to the patient
-    String updateAmbulanceQuery = "UPDATE Ambulance SET status = 'Assigned' WHERE ambulance_id = ?";
-    String insertAssignmentQuery = "INSERT INTO PatientAssignments (patient_name, ambulance_id) VALUES (?, ?)";
-
-    try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/AmbulanceManagementSystem", "root", "mysql");
-         PreparedStatement updateStmt = conn.prepareStatement(updateAmbulanceQuery);
-         PreparedStatement insertStmt = conn.prepareStatement(insertAssignmentQuery)) {
-
-        // Update the ambulance status to 'Assigned'
-        updateStmt.setString(1, ambulanceId);
-        updateStmt.executeUpdate();
-
-        // Insert the assignment of the ambulance to the patient
-        insertStmt.setString(1, patientName);
-        insertStmt.setString(2, ambulanceId);
-        insertStmt.executeUpdate();
-
-        // Show success message
-        JOptionPane.showMessageDialog(this, "Ambulance booked successfully for " + patientName);
-
-        // After booking, refresh the table of available ambulances
-        populateAssignedAmbulancesTable(patientName); // Update table with new assignment
-        populateAvailableAmbulancesTable(); // Refresh the available ambulances table to reflect the status change
-
-    } catch (SQLException e) {
-        JOptionPane.showMessageDialog(this, "Error booking ambulance: " + e.getMessage());
-    }
-}
+//    private void bookAmbulanceForPatient() {
+//        
+//    // Get the selected row from the available ambulances table
+//    int selectedRow = tableAvailableAmbulance.getSelectedRow();
+//    
+//    if (selectedRow == -1) {
+//        // If no row is selected, show a message
+//        JOptionPane.showMessageDialog(this, "Please select an ambulance from the table.");
+//        return;
+//    }
+//
+//    // Get the ambulance ID from the selected row
+//    String ambulanceId = tableAvailableAmbulance.getValueAt(selectedRow, 0).toString();
+//
+//    // Assuming you already have the patient details, for example:
+//    String patientName = txtPatientName.getText();  // Get patient name from the text field
+//
+//    // SQL query to assign the selected ambulance to the patient
+//    String updateAmbulanceQuery = "UPDATE Ambulance SET status = 'Assigned' WHERE ambulance_id = ?";
+//    String insertAssignmentQuery = "INSERT INTO PatientAssignments (patient_name, ambulance_id) VALUES (?, ?)";
+//
+//    try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/AmbulanceManagementSystem", "root", "mysql");
+//         PreparedStatement updateStmt = conn.prepareStatement(updateAmbulanceQuery);
+//         PreparedStatement insertStmt = conn.prepareStatement(insertAssignmentQuery)) {
+//
+//        // Update the ambulance status to 'Assigned'
+//        updateStmt.setString(1, ambulanceId);
+//        updateStmt.executeUpdate();
+//
+//        // Insert the assignment of the ambulance to the patient
+//        insertStmt.setString(1, patientName);
+//        insertStmt.setString(2, ambulanceId);
+//        insertStmt.executeUpdate();
+//
+//        // Show success message
+//        JOptionPane.showMessageDialog(this, "Ambulance booked successfully for " + patientName);
+//
+//        // After booking, refresh the table of available ambulances
+//        populateAssignedAmbulancesTable(patientName); // Update table with new assignment
+//        populateAvailableAmbulancesTable(); // Refresh the available ambulances table to reflect the status change
+//
+//    } catch (SQLException e) {
+//        JOptionPane.showMessageDialog(this, "Error booking ambulance: " + e.getMessage());
+//    }
+//}
 
     private void populateAssignedAmbulancesTable(String patientName) {
         // Method to populate the assigned ambulances table for the patient
