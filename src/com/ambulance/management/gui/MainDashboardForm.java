@@ -135,18 +135,20 @@ public class MainDashboardForm extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel5.setText("Administrator Login");
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Username");
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Password");
 
+        btnAdminLogin.setBackground(new java.awt.Color(102, 51, 0));
+        btnAdminLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnAdminLogin.setText("Admin LogIn");
         btnAdminLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdminLoginActionPerformed(evt);
             }
         });
-
-        txtAdminPassword.setText("jPasswordField1");
 
         javax.swing.GroupLayout AdminLoginPanelLayout = new javax.swing.GroupLayout(AdminLoginPanel);
         AdminLoginPanel.setLayout(AdminLoginPanelLayout);
@@ -159,8 +161,8 @@ public class MainDashboardForm extends javax.swing.JFrame {
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(AdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtAdminUsername)
-                    .addComponent(txtAdminPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE))
+                    .addComponent(txtAdminPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+                    .addComponent(txtAdminUsername))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(AdminLoginPanelLayout.createSequentialGroup()
                 .addGroup(AdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,7 +172,7 @@ public class MainDashboardForm extends javax.swing.JFrame {
                     .addGroup(AdminLoginPanelLayout.createSequentialGroup()
                         .addGap(140, 140, 140)
                         .addComponent(btnAdminLogin)))
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(163, Short.MAX_VALUE))
         );
         AdminLoginPanelLayout.setVerticalGroup(
             AdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,12 +194,17 @@ public class MainDashboardForm extends javax.swing.JFrame {
 
         LoginModulesPanel.add(AdminLoginPanel, "card2");
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setText("Patient Login");
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Username");
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setText("Password");
 
+        btnPatientLogin.setBackground(new java.awt.Color(0, 204, 102));
+        btnPatientLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnPatientLogin.setText("Login");
         btnPatientLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,29 +229,30 @@ public class MainDashboardForm extends javax.swing.JFrame {
         PatientLoginPanelLayout.setHorizontalGroup(
             PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PatientLoginPanelLayout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
-                .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtLogInUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-                    .addComponent(txtLogInPassword))
-                .addGap(78, 78, 78))
+                .addGap(157, 157, 157)
+                .addComponent(jLabel6)
+                .addContainerGap(179, Short.MAX_VALUE))
             .addGroup(PatientLoginPanelLayout.createSequentialGroup()
+                .addGap(86, 86, 86)
                 .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PatientLoginPanelLayout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel6)
-                            .addComponent(btnPatientLogin)))
+                        .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtLogInPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                            .addComponent(txtLogInUsername)))
                     .addGroup(PatientLoginPanelLayout.createSequentialGroup()
-                        .addGap(156, 156, 156)
-                        .addComponent(btnJumpSignIn))
-                    .addGroup(PatientLoginPanelLayout.createSequentialGroup()
-                        .addGap(134, 134, 134)
-                        .addComponent(jLabel9)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnPatientLogin)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnJumpSignIn)
+                        .addGap(18, 18, 18)))
+                .addGap(78, 78, 78))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientLoginPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addGap(69, 69, 69))
         );
         PatientLoginPanelLayout.setVerticalGroup(
             PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,12 +268,12 @@ public class MainDashboardForm extends javax.swing.JFrame {
                     .addComponent(txtLogInPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnPatientLogin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnJumpSignIn)
-                .addGap(30, 30, 30))
+                .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnJumpSignIn)
+                    .addComponent(btnPatientLogin))
+                .addGap(60, 60, 60))
         );
 
         LoginModulesPanel.add(PatientLoginPanel, "card3");
@@ -432,6 +440,7 @@ public class MainDashboardForm extends javax.swing.JFrame {
                 String patientName = rs.getString("name");
 
                 JOptionPane.showMessageDialog(null, "Login successful! Welcome, " + patientName);
+                PatientSession.getInstance().setPatientId(patientId);
                 PatientAssignment pa=new PatientAssignment();
                 
                 this.dispose();

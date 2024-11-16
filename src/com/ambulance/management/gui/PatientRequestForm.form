@@ -124,8 +124,8 @@
                           <EmptySpace min="-2" pref="535" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="btnJumpLogin" min="-2" pref="117" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="582" max="-2" attributes="0"/>
+                          <Component id="btnJumpLogin" min="-2" pref="128" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="572" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -196,9 +196,9 @@
                   <Component id="btnSignUp" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                   <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                  <Component id="btnJumpLogin" min="-2" pref="31" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                  <Component id="btnJumpLogin" min="-2" pref="49" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

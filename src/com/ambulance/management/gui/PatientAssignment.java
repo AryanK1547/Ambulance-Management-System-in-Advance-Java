@@ -7,6 +7,10 @@ package com.ambulance.management.gui;
 import javax.swing.JOptionPane;
 // Import statements should be placed here
 import com.ambulance.management.gui.PatientSession;
+import java.awt.BorderLayout;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.Insets;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import java.sql.Connection;
@@ -14,6 +18,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 
 /**
@@ -44,13 +53,16 @@ public class PatientAssignment extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         tableAvailableAmbulance = new javax.swing.JTable();
         btnBookAmbulance = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel21.setFont(new java.awt.Font("Tw Cen MT", 1, 48)); // NOI18N
         jLabel21.setText("Ambulance Assignment");
 
-        btnFindAmbulance.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnFindAmbulance.setBackground(new java.awt.Color(0, 153, 153));
+        btnFindAmbulance.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnFindAmbulance.setForeground(new java.awt.Color(255, 255, 255));
         btnFindAmbulance.setText("Find  Ambulance");
         btnFindAmbulance.setActionCommand("btnRegisterPatient");
         btnFindAmbulance.addActionListener(new java.awt.event.ActionListener() {
@@ -83,11 +95,23 @@ public class PatientAssignment extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(tableAvailableAmbulance);
 
+        btnBookAmbulance.setBackground(new java.awt.Color(204, 204, 0));
         btnBookAmbulance.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnBookAmbulance.setForeground(new java.awt.Color(255, 255, 255));
         btnBookAmbulance.setText("Book Ambulance");
         btnBookAmbulance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBookAmbulanceActionPerformed(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(204, 51, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Logout");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -98,35 +122,38 @@ public class PatientAssignment extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(680, 680, 680)
-                        .addComponent(btnFindAmbulance))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(483, 483, 483)
+                        .addGap(52, 52, 52)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(206, 206, 206)
                         .addComponent(jLabel21))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(313, 313, 313)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel20)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnBookAmbulance)
-                                .addGap(92, 92, 92))
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 847, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(379, Short.MAX_VALUE))
+                        .addGap(426, 426, 426)
+                        .addComponent(btnFindAmbulance, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(451, 451, 451)
+                        .addComponent(btnBookAmbulance, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel20)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 957, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(460, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jLabel21)
-                .addGap(100, 100, 100)
-                .addComponent(btnFindAmbulance)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnBookAmbulance, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addComponent(btnFindAmbulance, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
+                .addComponent(jLabel20)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(85, 85, 85)
+                .addComponent(btnBookAmbulance, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(132, 132, 132))
         );
 
         pack();
@@ -141,6 +168,14 @@ public class PatientAssignment extends javax.swing.JFrame {
         // TODO add your handling code here:
         populateAmbulanceTable();
     }//GEN-LAST:event_btnFindAmbulanceActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+         MainDashboardForm mdb=new MainDashboardForm();
+         this.dispose();
+        mdb.setVisible(true);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,59 +215,132 @@ public class PatientAssignment extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBookAmbulance;
     private javax.swing.JButton btnFindAmbulance;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable tableAvailableAmbulance;
     // End of variables declaration//GEN-END:variables
 
-    private void generatePatientReport(int patientId, String selectedAmbulanceId) {            
-        String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
-            String username = "root";
-            String password = "mysql";
+    private void generatePatientReport(int patientId, String selectedAmbulanceId) {
+    String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
+    String username = "root";
+    String password = "mysql";
 
-            String patientQuery = "SELECT * FROM Patient WHERE patient_id = ?";
-            String ambulanceQuery = "SELECT * FROM Ambulance WHERE ambulance_id = ?";
+    String patientQuery = "SELECT * FROM Patient WHERE patient_id = ?";
+    String ambulanceQuery = "SELECT * FROM Ambulance WHERE ambulance_id = ?";
 
-            try (Connection conn = DriverManager.getConnection(url, username, password);
-                PreparedStatement patientStmt = conn.prepareStatement(patientQuery);
-                PreparedStatement ambulanceStmt = conn.prepareStatement(ambulanceQuery)) {
+    try (Connection conn = DriverManager.getConnection(url, username, password);
+         PreparedStatement patientStmt = conn.prepareStatement(patientQuery);
+         PreparedStatement ambulanceStmt = conn.prepareStatement(ambulanceQuery)) {
 
-                // Fetch patient details
-                patientStmt.setInt(1, patientId);
-                ResultSet patientRs = patientStmt.executeQuery();
+        // Fetch patient details
+        patientStmt.setInt(1, patientId);
+        ResultSet patientRs = patientStmt.executeQuery();
 
-                // Fetch ambulance details
-                ambulanceStmt.setString(1, selectedAmbulanceId);
-                ResultSet ambulanceRs = ambulanceStmt.executeQuery();
+        // Fetch ambulance details
+        ambulanceStmt.setString(1, selectedAmbulanceId);
+        ResultSet ambulanceRs = ambulanceStmt.executeQuery();
 
-                if (patientRs.next() && ambulanceRs.next()) {
-                    String patientName = patientRs.getString("name");
-                    String patientContact = patientRs.getString("contact_info");
-                    String ambulanceType = ambulanceRs.getString("type");
-                    String ambulanceLocation = ambulanceRs.getString("location");
-                    String ambulanceStatus = ambulanceRs.getString("status");
+        if (patientRs.next() && ambulanceRs.next()) {
+            String patientName = patientRs.getString("name");
+            String patientContact = patientRs.getString("contact_info");
+            String patientAddress = patientRs.getString("address");
+            String ambulanceType = ambulanceRs.getString("type");
+            String ambulanceLocation = ambulanceRs.getString("location");
+            String ambulanceStatus = ambulanceRs.getString("status");
 
-                    // Format the report
-                    String report = "Patient Booking Report\n"
-                    + "---------------------------\n"
-                    + "Patient Name: " + patientName + "\n"
-                    + "Contact Info: " + patientContact + "\n\n"
-                    + "Assigned Ambulance Details:\n"
-                    + "Ambulance ID: " + selectedAmbulanceId + "\n"
-                    + "Type: " + ambulanceType + "\n"
-                    + "Location: " + ambulanceLocation + "\n"
-                    + "Status: " + ambulanceStatus + "\n";
+            // Format the report
+            String report = String.format(
+                """
+                ----------------------------------------------------------------
+                                       AMBULANCE BOOKING INVOICE
+                ----------------------------------------------------------------
+                Booking Date: %s
+                
+                Patient Details:
+                ----------------------------------------------------------------
+                Name          : %s
+                Contact       : %s
+                Address       : %s
+                
+                Ambulance Details:
+                ----------------------------------------------------------------
+                Ambulance ID  : %s
+                Type          : %s
+                Base Location : %s
+                Current Status: %s
+                
+                ----------------------------------------------------------------
+                Thank you for choosing our service. Stay safe and healthy!
+                ----------------------------------------------------------------
+                """,
+                new java.util.Date(),  // Booking date
+                patientName,
+                patientContact,
+                patientAddress,
+                selectedAmbulanceId,
+                ambulanceType,
+                ambulanceLocation,
+                ambulanceStatus
+            );
 
-                    // Display the report
-                    JOptionPane.showMessageDialog(this, report);
-                } else {
-                    JOptionPane.showMessageDialog(this, "Error generating the report. Please try again.");
-                }
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
-            }
+            // Display the report in a separate window with print functionality
+            showReportDialog(report);
+        } else {
+            JOptionPane.showMessageDialog(this, "Error generating the report. Please try again.");
+        }
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
+    }
 }
+
+    private void showReportDialog(String report) {
+    // Create a JDialog
+    JDialog reportDialog = new JDialog((Frame) null, "Patient Booking Report", true);
+    reportDialog.setSize(500, 400);
+    reportDialog.setLocationRelativeTo(null);
+    reportDialog.setLayout(new BorderLayout());
+
+    // Create a JTextArea to display the report
+    JTextArea textArea = new JTextArea(report);
+    textArea.setEditable(false);
+    textArea.setFont(new Font("Monospaced", Font.PLAIN, 14));
+    textArea.setMargin(new Insets(10, 10, 10, 10));
+
+    // Add the JTextArea to a JScrollPane for scrolling
+    JScrollPane scrollPane = new JScrollPane(textArea);
+    reportDialog.add(scrollPane, BorderLayout.CENTER);
+
+    // Add a print button
+    JButton printButton = new JButton("Print");
+    printButton.addActionListener(e -> printReport(textArea.getText()));
+
+    // Add the print button at the bottom of the dialog
+    JPanel buttonPanel = new JPanel();
+    buttonPanel.add(printButton);
+    reportDialog.add(buttonPanel, BorderLayout.SOUTH);
+
+    // Show the dialog
+    reportDialog.setVisible(true);
+}
+    private void printReport(String reportText) {
+    try {
+        // Use the built-in printing API
+        JTextArea printArea = new JTextArea(reportText);
+        boolean complete = printArea.print();
+        if (complete) {
+            JOptionPane.showMessageDialog(null, "Report printed successfully.");
+        } else {
+            JOptionPane.showMessageDialog(null, "Printing was cancelled.");
+        }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Error during printing: " + e.getMessage());
+    }
+}
+
+
+
     private void populateAmbulanceTable() {
     String url = "jdbc:mysql://localhost:3306/AmbulanceManagementSystem";
     String username = "root";
@@ -318,6 +426,9 @@ public class PatientAssignment extends javax.swing.JFrame {
         }
 
     } catch (SQLException e) {
+        System.out.println("Patient ID: " + patientId);
+        System.out.println("Ambulance ID: " + selectedAmbulanceId);
+
         JOptionPane.showMessageDialog(this, "Database error: " + e.getMessage());
     }
 }

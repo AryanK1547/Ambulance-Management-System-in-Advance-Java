@@ -239,8 +239,8 @@ public class PatientRequestForm extends javax.swing.JFrame {
                         .addComponent(jLabel12)
                         .addGap(535, 535, 535))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
-                        .addComponent(btnJumpLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(582, 582, 582))))
+                        .addComponent(btnJumpLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(572, 572, 572))))
         );
         PatientSignInPanelLayout.setVerticalGroup(
             PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -293,9 +293,9 @@ public class PatientRequestForm extends javax.swing.JFrame {
                 .addComponent(btnSignUp)
                 .addGap(48, 48, 48)
                 .addComponent(jLabel12)
-                .addGap(72, 72, 72)
-                .addComponent(btnJumpLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(129, 129, 129))
+                .addGap(46, 46, 46)
+                .addComponent(btnJumpLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(137, 137, 137))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -320,6 +320,10 @@ public class PatientRequestForm extends javax.swing.JFrame {
 
     private void btnJumpLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJumpLoginActionPerformed
         // TODO add your handling code here:
+        MainDashboardForm mdb=new MainDashboardForm();
+         this.dispose();
+        mdb.setVisible(true);
+        
         
     }//GEN-LAST:event_btnJumpLoginActionPerformed
 
