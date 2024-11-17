@@ -46,6 +46,7 @@ public class MainDashboardForm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         btnShowPatientLoginPanel = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
         LoginModulesPanel = new javax.swing.JPanel();
         AdminLoginPanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -54,6 +55,7 @@ public class MainDashboardForm extends javax.swing.JFrame {
         txtAdminUsername = new javax.swing.JTextField();
         btnAdminLogin = new javax.swing.JButton();
         txtAdminPassword = new javax.swing.JPasswordField();
+        jLabel11 = new javax.swing.JLabel();
         PatientLoginPanel = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -63,147 +65,141 @@ public class MainDashboardForm extends javax.swing.JFrame {
         txtLogInPassword = new javax.swing.JPasswordField();
         jLabel9 = new javax.swing.JLabel();
         btnJumpSignIn = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
 
         jLabel12.setText("jLabel12");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        LoginNavigationPanel.setLayout(null);
+
+        jButton1.setBackground(new java.awt.Color(51, 0, 102));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Administrator Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        LoginNavigationPanel.add(jButton1);
+        jButton1.setBounds(6, 79, 150, 23);
 
+        jButton2.setBackground(new java.awt.Color(51, 0, 102));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Patient Register");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        LoginNavigationPanel.add(jButton2);
+        jButton2.setBounds(200, 80, 130, 23);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Ambulance Management System ");
+        LoginNavigationPanel.add(jLabel1);
+        jLabel1.setBounds(18, 6, 378, 32);
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Dashboard:");
+        LoginNavigationPanel.add(jLabel2);
+        jLabel2.setBounds(18, 51, 80, 16);
 
+        btnShowPatientLoginPanel.setBackground(new java.awt.Color(51, 0, 102));
+        btnShowPatientLoginPanel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnShowPatientLoginPanel.setForeground(new java.awt.Color(255, 255, 255));
         btnShowPatientLoginPanel.setText("Patient Login");
         btnShowPatientLoginPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnShowPatientLoginPanelActionPerformed(evt);
             }
         });
+        LoginNavigationPanel.add(btnShowPatientLoginPanel);
+        btnShowPatientLoginPanel.setBounds(370, 80, 110, 23);
 
-        javax.swing.GroupLayout LoginNavigationPanelLayout = new javax.swing.GroupLayout(LoginNavigationPanel);
-        LoginNavigationPanel.setLayout(LoginNavigationPanelLayout);
-        LoginNavigationPanelLayout.setHorizontalGroup(
-            LoginNavigationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LoginNavigationPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addGap(30, 30, 30)
-                .addComponent(jButton2)
-                .addGap(18, 18, 18)
-                .addComponent(btnShowPatientLoginPanel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(LoginNavigationPanelLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(LoginNavigationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(LoginNavigationPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        LoginNavigationPanelLayout.setVerticalGroup(
-            LoginNavigationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LoginNavigationPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(LoginNavigationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(btnShowPatientLoginPanel))
-                .addGap(14, 14, 14))
-        );
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ambulance/management/utils/istockphoto-1185364077-612x612.jpg"))); // NOI18N
+        LoginNavigationPanel.add(jLabel10);
+        jLabel10.setBounds(-10, 0, 520, 120);
 
         LoginModulesPanel.setLayout(new java.awt.CardLayout());
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        AdminLoginPanel.setLayout(null);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Administrator Login");
+        AdminLoginPanel.add(jLabel5);
+        jLabel5.setBounds(150, 10, 231, 32);
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Username");
+        AdminLoginPanel.add(jLabel3);
+        jLabel3.setBounds(80, 60, 130, 32);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Password");
+        AdminLoginPanel.add(jLabel4);
+        jLabel4.setBounds(80, 110, 130, 32);
+        AdminLoginPanel.add(txtAdminUsername);
+        txtAdminUsername.setBounds(280, 70, 160, 22);
 
         btnAdminLogin.setBackground(new java.awt.Color(102, 51, 0));
+        btnAdminLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnAdminLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnAdminLogin.setText("Admin LogIn");
+        btnAdminLogin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAdminLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdminLoginActionPerformed(evt);
             }
         });
+        AdminLoginPanel.add(btnAdminLogin);
+        btnAdminLogin.setBounds(190, 160, 104, 38);
+        AdminLoginPanel.add(txtAdminPassword);
+        txtAdminPassword.setBounds(280, 120, 160, 22);
 
-        javax.swing.GroupLayout AdminLoginPanelLayout = new javax.swing.GroupLayout(AdminLoginPanel);
-        AdminLoginPanel.setLayout(AdminLoginPanelLayout);
-        AdminLoginPanelLayout.setHorizontalGroup(
-            AdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AdminLoginPanelLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addGroup(AdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(AdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtAdminPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-                    .addComponent(txtAdminUsername))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(AdminLoginPanelLayout.createSequentialGroup()
-                .addGroup(AdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AdminLoginPanelLayout.createSequentialGroup()
-                        .addGap(114, 114, 114)
-                        .addComponent(jLabel5))
-                    .addGroup(AdminLoginPanelLayout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(btnAdminLogin)))
-                .addContainerGap(163, Short.MAX_VALUE))
-        );
-        AdminLoginPanelLayout.setVerticalGroup(
-            AdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AdminLoginPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addGap(18, 18, 18)
-                .addGroup(AdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtAdminUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(AdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtAdminPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnAdminLogin)
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
+        jLabel11.setBackground(new java.awt.Color(0, 102, 102));
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Downloads\\admin.png")); // NOI18N
+        jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        AdminLoginPanel.add(jLabel11);
+        jLabel11.setBounds(0, 0, 510, 220);
 
         LoginModulesPanel.add(AdminLoginPanel, "card2");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        PatientLoginPanel.setLayout(null);
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Patient Login");
+        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        PatientLoginPanel.add(jLabel6);
+        jLabel6.setBounds(130, 0, 240, 50);
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Username");
+        PatientLoginPanel.add(jLabel7);
+        jLabel7.setBounds(86, 64, 130, 32);
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Password");
+        PatientLoginPanel.add(jLabel8);
+        jLabel8.setBounds(86, 108, 130, 32);
+        PatientLoginPanel.add(txtLogInUsername);
+        txtLogInUsername.setBounds(279, 68, 170, 22);
 
         btnPatientLogin.setBackground(new java.awt.Color(0, 204, 102));
+        btnPatientLogin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnPatientLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnPatientLogin.setText("Login");
         btnPatientLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -211,11 +207,20 @@ public class MainDashboardForm extends javax.swing.JFrame {
                 btnPatientLoginActionPerformed(evt);
             }
         });
+        PatientLoginPanel.add(btnPatientLogin);
+        btnPatientLogin.setBounds(90, 170, 100, 40);
+        PatientLoginPanel.add(txtLogInPassword);
+        txtLogInPassword.setBounds(279, 112, 170, 22);
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Don't have an Account? ");
+        jLabel9.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        PatientLoginPanel.add(jLabel9);
+        jLabel9.setBounds(300, 160, 129, 20);
 
         btnJumpSignIn.setBackground(new java.awt.Color(51, 153, 255));
+        btnJumpSignIn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnJumpSignIn.setForeground(new java.awt.Color(255, 255, 255));
         btnJumpSignIn.setText("Sign-In");
         btnJumpSignIn.addActionListener(new java.awt.event.ActionListener() {
@@ -223,58 +228,15 @@ public class MainDashboardForm extends javax.swing.JFrame {
                 btnJumpSignInActionPerformed(evt);
             }
         });
+        PatientLoginPanel.add(btnJumpSignIn);
+        btnJumpSignIn.setBounds(330, 180, 72, 23);
 
-        javax.swing.GroupLayout PatientLoginPanelLayout = new javax.swing.GroupLayout(PatientLoginPanel);
-        PatientLoginPanel.setLayout(PatientLoginPanelLayout);
-        PatientLoginPanelLayout.setHorizontalGroup(
-            PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PatientLoginPanelLayout.createSequentialGroup()
-                .addGap(157, 157, 157)
-                .addComponent(jLabel6)
-                .addContainerGap(179, Short.MAX_VALUE))
-            .addGroup(PatientLoginPanelLayout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PatientLoginPanelLayout.createSequentialGroup()
-                        .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtLogInPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                            .addComponent(txtLogInUsername)))
-                    .addGroup(PatientLoginPanelLayout.createSequentialGroup()
-                        .addComponent(btnPatientLogin)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnJumpSignIn)
-                        .addGap(18, 18, 18)))
-                .addGap(78, 78, 78))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientLoginPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel9)
-                .addGap(69, 69, 69))
-        );
-        PatientLoginPanelLayout.setVerticalGroup(
-            PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientLoginPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
-                .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(txtLogInUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtLogInPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PatientLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnJumpSignIn)
-                    .addComponent(btnPatientLogin))
-                .addGap(60, 60, 60))
-        );
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Downloads\\login patient.jpg")); // NOI18N
+        jLabel13.setToolTipText("");
+        jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        PatientLoginPanel.add(jLabel13);
+        jLabel13.setBounds(0, 0, 540, 250);
 
         LoginModulesPanel.add(PatientLoginPanel, "card3");
 
@@ -285,7 +247,7 @@ public class MainDashboardForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LoginModulesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LoginModulesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)
                     .addComponent(LoginNavigationPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -293,9 +255,9 @@ public class MainDashboardForm extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(LoginNavigationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(LoginModulesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 213, Short.MAX_VALUE)
+                .addComponent(LoginNavigationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(LoginModulesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -394,7 +356,10 @@ public class MainDashboardForm extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -74,14 +74,21 @@ public class PatientRequestForm extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         txtSignInAddress = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        PatientSignInPanel.setLayout(null);
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Already have an account ?");
+        PatientSignInPanel.add(jLabel12);
+        jLabel12.setBounds(510, 480, 240, 20);
 
         btnJumpLogin.setBackground(new java.awt.Color(0, 204, 51));
-        btnJumpLogin.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnJumpLogin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnJumpLogin.setForeground(new java.awt.Color(0, 0, 0));
         btnJumpLogin.setText("Log-In");
         btnJumpLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -89,22 +96,43 @@ public class PatientRequestForm extends javax.swing.JFrame {
                 btnJumpLoginActionPerformed(evt);
             }
         });
+        PatientSignInPanel.add(btnJumpLogin);
+        btnJumpLogin.setBounds(760, 470, 150, 30);
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Sign-In");
+        PatientSignInPanel.add(jLabel13);
+        jLabel13.setBounds(20, 0, 183, 60);
 
-        lblUsername.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblUsername.setForeground(new java.awt.Color(0, 0, 0));
         lblUsername.setText("Set Username");
+        PatientSignInPanel.add(lblUsername);
+        lblUsername.setBounds(570, 370, 140, 25);
 
-        txtSignInUsername.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtSignInUsername.setBackground(new java.awt.Color(255, 255, 255));
+        txtSignInUsername.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtSignInUsername.setForeground(new java.awt.Color(0, 0, 0));
+        txtSignInUsername.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PatientSignInPanel.add(txtSignInUsername);
+        txtSignInUsername.setBounds(670, 370, 250, 31);
 
-        txtSignInPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtSignInPassword.setBackground(new java.awt.Color(255, 255, 255));
+        txtSignInPassword.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtSignInPassword.setForeground(new java.awt.Color(0, 0, 0));
+        txtSignInPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PatientSignInPanel.add(txtSignInPassword);
+        txtSignInPassword.setBounds(670, 420, 250, 31);
 
-        lblPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblPassword.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblPassword.setForeground(new java.awt.Color(0, 0, 0));
         lblPassword.setText("Set Password");
+        PatientSignInPanel.add(lblPassword);
+        lblPassword.setBounds(570, 420, 120, 25);
 
         btnSignUp.setBackground(new java.awt.Color(0, 153, 153));
-        btnSignUp.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnSignUp.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnSignUp.setForeground(new java.awt.Color(255, 255, 255));
         btnSignUp.setText("Sign-Up");
         btnSignUp.addActionListener(new java.awt.event.ActionListener() {
@@ -112,207 +140,157 @@ public class PatientRequestForm extends javax.swing.JFrame {
                 btnSignUpActionPerformed(evt);
             }
         });
+        PatientSignInPanel.add(btnSignUp);
+        btnSignUp.setBounds(220, 480, 150, 30);
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Patient Name");
+        PatientSignInPanel.add(jLabel14);
+        jLabel14.setBounds(100, 70, 136, 25);
 
-        txtPatientName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtPatientName.setBackground(new java.awt.Color(255, 255, 255));
+        txtPatientName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtPatientName.setForeground(new java.awt.Color(0, 0, 0));
+        txtPatientName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PatientSignInPanel.add(txtPatientName);
+        txtPatientName.setBounds(160, 100, 160, 31);
 
-        cbPatientGender.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cbPatientGender.setBackground(new java.awt.Color(255, 255, 255));
+        cbPatientGender.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        cbPatientGender.setForeground(new java.awt.Color(0, 0, 0));
         cbPatientGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
+        cbPatientGender.setBorder(null);
+        PatientSignInPanel.add(cbPatientGender);
+        cbPatientGender.setBounds(410, 100, 170, 31);
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Gender");
+        PatientSignInPanel.add(jLabel15);
+        jLabel15.setBounds(360, 70, 87, 25);
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Age");
+        PatientSignInPanel.add(jLabel16);
+        jLabel16.setBounds(640, 70, 37, 25);
 
-        txtSignInAge.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtSignInAge.setBackground(new java.awt.Color(255, 255, 255));
+        txtSignInAge.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtSignInAge.setForeground(new java.awt.Color(0, 0, 0));
+        txtSignInAge.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PatientSignInPanel.add(txtSignInAge);
+        txtSignInAge.setBounds(670, 100, 90, 31);
 
+        txtSignInDesp.setBackground(new java.awt.Color(255, 255, 255));
         txtSignInDesp.setColumns(20);
-        txtSignInDesp.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtSignInDesp.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtSignInDesp.setForeground(new java.awt.Color(0, 0, 0));
         txtSignInDesp.setRows(5);
+        txtSignInDesp.setBorder(null);
         jScrollPane4.setViewportView(txtSignInDesp);
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PatientSignInPanel.add(jScrollPane4);
+        jScrollPane4.setBounds(600, 140, 320, 90);
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("Condition Discription: ");
+        PatientSignInPanel.add(jLabel17);
+        jLabel17.setBounds(440, 150, 194, 20);
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Location ");
+        PatientSignInPanel.add(jLabel18);
+        jLabel18.setBounds(110, 210, 118, 40);
 
-        cbPatientNearestLandmark.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cbPatientNearestLandmark.setBackground(new java.awt.Color(255, 255, 255));
+        cbPatientNearestLandmark.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        cbPatientNearestLandmark.setForeground(new java.awt.Color(0, 0, 0));
         cbPatientNearestLandmark.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Central Hospital", "North Wing Health Center", "East District Hospital", "West Side Clinic", "South Regional Hospital" }));
+        cbPatientNearestLandmark.setBorder(null);
         cbPatientNearestLandmark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbPatientNearestLandmarkActionPerformed(evt);
             }
         });
+        PatientSignInPanel.add(cbPatientNearestLandmark);
+        cbPatientNearestLandmark.setBounds(160, 240, 610, 31);
 
-        txtContactInfo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtContactInfo.setBackground(new java.awt.Color(255, 255, 255));
+        txtContactInfo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtContactInfo.setForeground(new java.awt.Color(0, 0, 0));
+        txtContactInfo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtContactInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtContactInfoActionPerformed(evt);
             }
         });
+        PatientSignInPanel.add(txtContactInfo);
+        txtContactInfo.setBounds(160, 170, 240, 30);
 
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("Contact Info");
+        PatientSignInPanel.add(jLabel19);
+        jLabel19.setBounds(110, 150, 98, 25);
 
-        cbPatientAmbulanceType.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cbPatientAmbulanceType.setBackground(new java.awt.Color(255, 255, 255));
+        cbPatientAmbulanceType.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        cbPatientAmbulanceType.setForeground(new java.awt.Color(0, 0, 0));
         cbPatientAmbulanceType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Basic Life Support (BLS)", "Advanced Life Support (ALS)", "Patient Transport Vehicle (PTV)", "Neonatal Ambulance", "Air Ambulance" }));
+        cbPatientAmbulanceType.setBorder(null);
+        PatientSignInPanel.add(cbPatientAmbulanceType);
+        cbPatientAmbulanceType.setBounds(160, 310, 610, 30);
 
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("Type Of Ambulance");
+        PatientSignInPanel.add(jLabel20);
+        jLabel20.setBounds(110, 280, 157, 40);
 
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel21.setText("Address :");
+        PatientSignInPanel.add(jLabel21);
+        jLabel21.setBounds(-486, 380, 140, 40);
 
+        txtSignInAddress.setBackground(new java.awt.Color(255, 255, 255));
         txtSignInAddress.setColumns(20);
-        txtSignInAddress.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtSignInAddress.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtSignInAddress.setForeground(new java.awt.Color(0, 0, 0));
         txtSignInAddress.setRows(5);
+        txtSignInAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jScrollPane5.setViewportView(txtSignInAddress);
 
-        javax.swing.GroupLayout PatientSignInPanelLayout = new javax.swing.GroupLayout(PatientSignInPanel);
-        PatientSignInPanel.setLayout(PatientSignInPanelLayout);
-        PatientSignInPanelLayout.setHorizontalGroup(
-            PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
-                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
-                        .addGap(411, 411, 411)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(448, 448, 448))
-                    .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane4)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
-                                .addComponent(jScrollPane5)
-                                .addGap(24, 24, 24)
-                                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                                        .addComponent(lblPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txtSignInPassword))
-                                    .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                                        .addComponent(lblUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtSignInUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(5, 5, 5))
-                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                                .addComponent(txtPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(40, 40, 40)
-                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(cbPatientGender, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(47, 47, 47)
-                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtSignInAge, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(78, 78, 78)
-                                .addComponent(jLabel19)
-                                .addGap(36, 36, 36)
-                                .addComponent(txtContactInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE))
-                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                                .addComponent(cbPatientNearestLandmark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(63, 63, 63)
-                                .addComponent(jLabel20)
-                                .addGap(45, 45, 45)
-                                .addComponent(cbPatientAmbulanceType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addGap(88, 88, 88))
-            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
-                        .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(550, 550, 550))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel12)
-                        .addGap(535, 535, 535))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createSequentialGroup()
-                        .addComponent(btnJumpLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(572, 572, 572))))
-        );
-        PatientSignInPanelLayout.setVerticalGroup(
-            PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                .addGap(9, 9, 9)
-                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel16)
-                                        .addComponent(txtSignInAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(cbPatientGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel15)
-                                        .addComponent(txtPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel14))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel19)
-                                        .addComponent(txtContactInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(cbPatientNearestLandmark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel18)
-                                    .addComponent(jLabel20)
-                                    .addComponent(cbPatientAmbulanceType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                                .addGap(77, 77, 77)
-                                .addComponent(jLabel17)))
-                        .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(jLabel21)
-                                .addGap(30, 30, 30)
-                                .addComponent(lblPassword))
-                            .addGroup(PatientSignInPanelLayout.createSequentialGroup()
-                                .addGap(33, 33, 33)
-                                .addGroup(PatientSignInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(lblUsername)
-                                    .addComponent(txtSignInUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(txtSignInPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
-                .addComponent(btnSignUp)
-                .addGap(48, 48, 48)
-                .addComponent(jLabel12)
-                .addGap(46, 46, 46)
-                .addComponent(btnJumpLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(137, 137, 137))
-        );
+        PatientSignInPanel.add(jScrollPane5);
+        jScrollPane5.setBounds(160, 360, 310, 110);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Address");
+        PatientSignInPanel.add(jLabel2);
+        jLabel2.setBounds(110, 370, 70, 20);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Downloads\\og-image-V5li3WiIcfOjSf9mW73EJ.png")); // NOI18N
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PatientSignInPanel.add(jLabel1);
+        jLabel1.setBounds(0, 0, 950, 520);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(PatientSignInPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(PatientSignInPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 948, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(PatientSignInPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PatientSignInPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -541,6 +519,7 @@ public class PatientRequestForm extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbPatientAmbulanceType;
     private javax.swing.JComboBox<String> cbPatientGender;
     private javax.swing.JComboBox<String> cbPatientNearestLandmark;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -549,6 +528,7 @@ public class PatientRequestForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JScrollPane jScrollPane4;
